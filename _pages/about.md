@@ -8,7 +8,7 @@ redirect_from:
 ---
 Biography
 ======
-I'm an undergraduate student majoring in IoT Engineering at Northeast Agricultural University. Passionate about software development and data analysis, I am proficient in multiple programming languages and tools, and possess a solid foundation in AI. I have actively participated in various projects and competitions during my academic journey, accumulating extensive practical experience.
+Hai Huang is pursuing the B.Eng. in Internet of Things Engineering at Northeast Agricultural University and completed an exchange at Nanyang Technological University in 2025. He served as an AI Solutions Engineer intern at China Unicom Chengdu Branch, Digital Technology Center. His research interests include computer vision, machine learning and AIoT applications.
 
 
 ### Interests
