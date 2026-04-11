@@ -33,8 +33,8 @@ News
 
 - [Mar 2026] Admitted to Nanyang Technological University for the M.Sc. program in Robotics and Intelligent Systems.
 - [Jul 2025] Interning at China Unicom Chengdu Branch as an AI solution engineer intern.
-- [Apr 2024] Our team secured a silver medal in the Kaggle Competition: Home Credit - Credit Risk Model Stability, ranking in the top 0.5%.
-- [Mar 2024] Successfully completed a Big Data Service Platform project.
+- [Apr 2024] Secured a silver medal in the Kaggle Competition: Home Credit - Credit Risk Model Stability, ranking in the top 0.5%.
+- [Mar 2024] Completed a Big Data Service Platform project.
 
 
 
