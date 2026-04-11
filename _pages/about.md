@@ -14,15 +14,15 @@ I am currently completing my B.Eng. in Internet of Things Engineering at Northea
 ### Interests
 
 
-- Computer Vision 
-- Machine Learning 
-- Robotics 
+- #### Computer Vision 
+- #### Machine Learning 
+- #### Robotics 
 
 ### Education Background
 
-- ##### Nanyang Technological University — M.Sc. in Robotics and Intelligent Systems
+- #### Nanyang Technological University — M.Sc. in Robotics and Intelligent Systems
 Sep 2026 – 
-- ##### Northeast Agricultural University — B.Eng. in Internet of Things Engineering
+- #### Northeast Agricultural University — B.Eng. in Internet of Things Engineering
 Sep 2022 – June 2026
 Main Courses: Data Structures, Scientific Computing, Python Programming, Embedded Development, IoT Industry Applications
 GPA: 86/100
