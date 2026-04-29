@@ -37,6 +37,7 @@ News
 - [Jul 2025] Interning at China Unicom Chengdu Branch as an AI solution engineer intern.
 - [Apr 2024] Secured a silver medal in the Kaggle Competition: Home Credit - Credit Risk Model Stability, ranking in the top 0.5%.
 - [Mar 2024] Completed a Big Data Service Platform project.
+- [Sep 2022] Enrolled in college of Intelligent Science and engineering of Northeast Agricultural University.
 
 
 
