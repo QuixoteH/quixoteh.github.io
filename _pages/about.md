@@ -8,8 +8,7 @@ redirect_from:
 ---
 Biography
 ======
-I am currently completing my B.Eng. in Internet of Things Engineering at Northeast Agricultural University. I will begin my M.Sc. studies in Robotics and Intelligent Systems at Nanyang Technological University in Fall 2026.Previously, I served as an AI Solutions Engineer intern at China Unicom Chengdu Branch, Digital Technology Center. My research interest mainly focus on computer vision and robotics.
-
+I recently completed my B.Eng. in Internet of Things Engineering at Northeast Agricultural University. I will begin my M.Sc. studies in Robotics and Intelligent Systems at Nanyang Technological University in Fall 2026. Previously, I served as an AI Solutions Engineer intern at China Unicom Chengdu Branch, Digital Technology Center. My research interests focus on computer vision and robotics.
 
 ### Interests
 
@@ -27,7 +26,7 @@ Sep 2026 –
 Sep 2022 – June 2026
 
 Main Courses: Data Structures, Scientific Computing, Python Programming, Embedded Development, IoT Industry Applications
-GPA: 86/100
+GPA: 85/100
 
 
 News
