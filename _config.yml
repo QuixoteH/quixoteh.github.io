@@ -12,10 +12,10 @@ site_theme               : "air" # Currently available options are "default", "a
 title                    : "Homepage"
 title_separator          : "-"
 name                     : &name "Hai HUANG"
-description              : &description "personal description"
+description              : &description "Robotics and intelligent systems researcher"
 url                      : https://quixoteh.github.io/ # the base hostname & protocol for your site e.g. "https://[your GitHub username].github.io" or if you already have some other page hosted on Github then use "https://[your GitHub username].github.io/[Your Repo Name]"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
-repository               : "academicpages/academicpages.github.io"
+repository               : "QuixoteH/quixoteh.github.io"
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -25,9 +25,9 @@ author:
   avatar           : "profile.png"
   name             : "Hai HUANG"
 #  pronouns         : # example: "she/her"  
-  bio              : "quixotehh@gmail.com"
-  location         : "People's Republic of China"
-  employer         : "China Unicom"
+  bio              : "Incoming M.Sc. student in Robotics and Intelligent Systems at NTU"
+  location         : "Singapore"
+  employer         : "Nanyang Technological University"
  # uri              : "https://www.chinaunicom.com/"
  # email            : "quixotehh@gmail.com" 
 

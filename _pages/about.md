@@ -12,31 +12,27 @@ I recently completed my B.Eng. in Internet of Things Engineering at Northeast Ag
 
 ### Interests
 
-
-- Computer Vision 
-- Machine Learning 
-- Robotics 
+- Robot Manipulation
+- Reinforcement Learning
+- Vision-Language-Action Models
+- Computer Vision
 
 ### Education Background
 
-- Nanyang Technological University — M.Sc. in Robotics and Intelligent Systems
-Sep 2026 –
+- Nanyang Technological University, School of Mechanical and Aerospace Engineering — M.S. in Robotics and Intelligent Systems (Aug. 2026 – Present)
 
-- Northeast Agricultural University — B.Eng. in Internet of Things Engineering
-Sep 2022 – June 2026
+- Northeast Agricultural University, College of Intelligent Science and Engineering — B.E. in Internet of Things (Sep. 2022 – Jun. 2026) · GPA: 85/100
 
-Main Courses: Data Structures, Scientific Computing, Python Programming, Embedded Development, IoT Industry Applications
-GPA: 85/100
+Relevant Coursework: Data Structures and Algorithms, Microcontroller Development, Principles of Sensor Networks
 
 
 News
 ======
 
+- [Jul 2026] Developing an imitation-learning solution for the Marso Hack Berlin 2026 Robot Parcel Sorting Challenge.
+- [Jul 2026] Reproduced Google DeepMind's MuJoCo Playground vision-based grasping task with a GPU-parallelized PPO pipeline.
+- [Jun 2026] Completed an end-to-end LeRobot imitation-learning pipeline on the SO-101 dual-arm platform.
 - [Mar 2026] Admitted to Nanyang Technological University for the M.Sc. program in Robotics and Intelligent Systems.
-- [Jul 2025] Interning at China Unicom Chengdu Branch as an AI solution engineer intern.
+- [Oct 2025] Co-authored MSM-Seg (arXiv:2510.10679), now under review at IEEE TMM after major revision.
+- [Sep 2025] Completed an AI Solutions Engineer internship at China Unicom Chengdu Branch, Digital Technology Center.
 - [Apr 2024] Secured a silver medal in the Kaggle Competition: Home Credit - Credit Risk Model Stability, ranking in the top 0.5%.
-- [Mar 2024] Completed a Big Data Service Platform project.
-- [Sep 2022] Enrolled in college of Intelligent Science and engineering of Northeast Agricultural University.
-
-
-
