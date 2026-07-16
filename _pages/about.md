@@ -17,15 +17,6 @@ I recently completed my B.Eng. in Internet of Things Engineering at Northeast Ag
 - Vision-Language-Action Models
 - Computer Vision
 
-### Education Background
-
-- Nanyang Technological University, School of Mechanical and Aerospace Engineering — M.S. in Robotics and Intelligent Systems (Aug. 2026 – Present)
-
-- Northeast Agricultural University, College of Intelligent Science and Engineering — B.E. in Internet of Things (Sep. 2022 – Jun. 2026) · GPA: 85/100
-
-Relevant Coursework: Data Structures and Algorithms, Microcontroller Development, Principles of Sensor Networks
-
-
 News
 ======
 
