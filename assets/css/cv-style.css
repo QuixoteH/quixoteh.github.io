@@ -212,6 +212,13 @@
   color: #666;
 }
 
+@media (max-width: 600px) {
+  .cv-item-header {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
 /* Print Styles */
 @media print {
   .cv-container {
