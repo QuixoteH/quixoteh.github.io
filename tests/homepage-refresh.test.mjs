@@ -37,6 +37,13 @@ test('homepage config matches the approved GentleFress structure', () => {
       { id: 'news', type: 'list', source: 'news.toml', title: 'News' },
     ]
   );
+
+  const bio = read('content/bio.md').trim();
+  assert.ok(
+    bio.endsWith(
+      '> I am currently looking for research collaboration and internship opportunities related to Force-aware Robot Learning, Robot Manipulation, and Vision-Language-Action Models.'
+    )
+  );
 });
 
 test('education and experience contain only approved facts', () => {
