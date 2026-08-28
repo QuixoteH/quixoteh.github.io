@@ -11,6 +11,7 @@ Add the missing email contact icon and official organization logos to the curren
 - The email control has the accessible name and hover title `Email`.
 - Change the homepage author heading from `Hai HUANG` to `Hai Huang`.
 - Shorten the homepage profile title to exactly `M.S. Student in Robotics`.
+- Rename the homepage biography section heading from `About` to `Biography` while keeping the navigation label `About`.
 - Add the official A*STAR logo to `A*STAR Research Attachment`.
 - Add the official China Unicom logo to `China Unicom AI Solutions Engineer Intern`.
 - Keep both Experience titles exactly as written.
@@ -43,6 +44,7 @@ Implementation is complete only when:
 ## Scope Boundaries
 
 - Do not change Biography, News, Research, Publications, Awards, navigation, theme, or accent colors.
+- Apart from the section heading, do not change the biography text.
 - Apart from removing the homepage GPA line, do not change Education content.
 - Keep the CV GPA unchanged.
 - Do not change the CV name or other CV content.
