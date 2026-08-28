@@ -99,4 +99,3 @@ Migration is complete only when all of the following pass from a clean checkout:
 - No like button, analytics, contact form, blog, teaching page, or services page.
 - No replacement portrait or generated artwork.
 - No unrelated cleanup outside files replaced or made obsolete by the migration.
-

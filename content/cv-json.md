@@ -2,10 +2,10 @@
 
 **Incoming M.Sc. Student in Robotics and Intelligent Systems**
 
-[quixotehh@gmail.com](mailto:quixotehh@gmail.com)  
-<https://quixoteh.github.io>  
-Singapore, SG  
-GitHub: [QuixoteH](https://github.com/QuixoteH)  
+[quixotehh@gmail.com](mailto:quixotehh@gmail.com)\
+<https://quixoteh.github.io>\
+Singapore, SG\
+GitHub: [QuixoteH](https://github.com/QuixoteH)\
 LinkedIn: [quixoteh](https://www.linkedin.com/in/quixoteh)
 
 ## Summary
@@ -16,14 +16,14 @@ Robot manipulation researcher focusing on reinforcement learning and vision-lang
 
 ### M.S. in Robotics and Intelligent Systems
 
-**Master of Science** · Aug. 2026 - Present  
+**Master of Science** · Aug. 2026 - Present\
 Nanyang Technological University, School of Mechanical and Aerospace Engineering
 
 ### B.E. in Internet of Things
 
-**Bachelor of Engineering** · Sep. 2022 - Jun. 2026  
-Northeast Agricultural University, College of Intelligent Science and Engineering  
-GPA: 85/100  
+**Bachelor of Engineering** · Sep. 2022 - Jun. 2026\
+Northeast Agricultural University, College of Intelligent Science and Engineering\
+GPA: 85/100\
 Courses: Data Structures and Algorithms, Microcontroller Development, Principles of Sensor Networks
 
 ## Work Experience
@@ -64,9 +64,9 @@ Supported AI solution planning and technical delivery for government and enterpr
 
 ### MSM-Seg: A Modality-and-Slice Memory Framework with Category-Agnostic Prompting for Multi-Modal Brain Tumor Segmentation
 
-**2025-10-14**  
-arXiv:2510.10679; under review at IEEE TMM after major revision  
-Yuxiang Luo, Qing Xu, Hai Huang, et al.  
+**2025-10-14**\
+arXiv:2510.10679; under review at IEEE TMM after major revision\
+Yuxiang Luo, Qing Xu, Hai Huang, et al.\
 [View Publication](https://arxiv.org/abs/2510.10679)
 
 ## Portfolio

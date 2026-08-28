@@ -20,8 +20,6 @@ const eslintConfig = [
       ".bundle/**",
       ".sass-cache/**",
       ".playwright-cli/**",
-      "assets/**",
-      "talkmap/**",
     ],
   },
   ...compat.extends("next/core-web-vitals", "next/typescript"),

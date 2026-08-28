@@ -286,4 +286,4 @@ function reconstructBibTeX(entry: { entryType: string; citationKey: string; entr
   bibtex += '}';
 
   return bibtex;
-} 
+}
