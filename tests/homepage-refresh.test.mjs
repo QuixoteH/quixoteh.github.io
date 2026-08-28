@@ -10,6 +10,7 @@ const readToml = (file) => parse(read(file));
 
 test('homepage config matches the approved GentleFress structure', () => {
   const config = readToml('content/config.toml');
+  assert.equal(config.site.title, 'Hai Huang');
   assert.equal(config.site.favicon, '/favicon-book.svg');
   assert.equal(config.author.name, 'Hai Huang');
   assert.equal(config.author.title, 'M.S. Student in Robotics');
@@ -73,7 +74,7 @@ test('education and experience contain only approved facts', () => {
       date: '07/2025 – 09/2025',
       content: 'Chengdu, China',
       image: '/logos/china-unicom.png',
-      tags: ['AI Solution', 'IoT Solution'],
+      tags: ['AI Solutions', 'IoT Solutions'],
     },
   ]);
   for (const item of experience.items) {
@@ -131,6 +132,8 @@ test('GentleFress visual structure and light-default theme are configured', () =
 
 test('CV changes only confirmed stale facts', () => {
   const cv = read('content/cv-json.md');
+  assert.match(cv, /^## Hai Huang$/m);
+  assert.doesNotMatch(cv, /Hai HUANG/);
   assert.match(cv, /\*\*M\.Sc\. Student in Robotics and Intelligent Systems\*\*/);
   assert.doesNotMatch(cv, /Incoming M\.Sc\. Student/);
   assert.match(cv, /### M\.S\. in Robotics and Intelligent Systems/);
@@ -140,4 +143,28 @@ test('CV changes only confirmed stale facts', () => {
   assert.doesNotMatch(cv, /Developing an imitation-learning solution/);
   assert.match(cv, /under review at IEEE TMM after major revision/);
   assert.match(cv, /85\/100/);
+});
+
+test('public project status stays consistent with confirmed updates', () => {
+  const portfolio = readToml('content/portfolio.toml');
+  const so101 = portfolio.items.find(({ title }) => title === 'SO-101 Real-World Robotic Learning with LeRobot');
+  const marso = portfolio.items.find(({ title }) => title.startsWith('Marso Hack Berlin 2026'));
+  assert.equal(so101?.date, 'July 01, 2026');
+  assert.match(marso?.content ?? '', /Completed an imitation-learning solution/);
+  assert.doesNotMatch(marso?.content ?? '', /Developing an imitation-learning solution/);
+  assert.match(marso?.content ?? '', /Parsed and replayed expert demonstration trajectories/);
+  assert.doesNotMatch(marso?.content ?? '', /- (Parsing|Establishing|Building) /);
+  assert.match(marso?.content ?? '', /local rollout episodes/);
+  assert.doesNotMatch(marso?.content ?? '', /held-out|reproducible|submissions on Kaggle/);
+
+  const publication = read('content/publications.bib');
+  assert.match(publication, /Accepted for publication as a regular paper in IEEE Transactions on Multimedia\./);
+  assert.doesNotMatch(publication, /Under review at IEEE Transactions on Multimedia after major revision\./);
+});
+
+test('Awards keeps the result inside the card without a duplicate section summary', () => {
+  const awards = readToml('content/teaching.toml');
+  assert.equal(awards.description, undefined);
+  assert.equal(awards.items.length, 1);
+  assert.match(awards.items[0].content, /ranking in the top 0\.5%/);
 });

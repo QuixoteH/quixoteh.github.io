@@ -1,6 +1,5 @@
 type = "card"
 title = "Awards"
-description = "Silver medal, ranking in the top 0.5% of teams."
 
 [[items]]
 title = "Silver Medal – Home Credit: Credit Risk Model Stability"

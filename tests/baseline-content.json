@@ -40,8 +40,8 @@
       "China Unicom Chengdu Branch, Digital Technology Center",
       "07/2025 – 09/2025",
       "Chengdu, China",
-      "AI Solution",
-      "IoT Solution",
+      "AI Solutions",
+      "IoT Solutions",
       "News",
       "[Aug 2026]",
       "MSM-Seg was accepted for publication as a regular paper in IEEE Transactions on Multimedia.",
@@ -72,7 +72,7 @@
       "Built the video ingestion and preprocessing pipeline with OpenCV to feed live field footage into the inference pipeline.",
       "Fine-tuned and deployed a YOLOv8x model for real-time pest detection on the IP102 dataset, with results visualized through a PyQt5 interface backed by SQLite.",
       "SO-101 Real-World Robotic Learning with LeRobot",
-      "May 01, 2026",
+      "July 01, 2026",
       "End-to-end imitation learning on the Huaner SO-101 dual-arm platform using LeRobot.",
       "Reproduced an end-to-end imitation-learning pipeline on the Huaner SO-101 dual-arm platform using the LeRobot framework, covering teleoperation data collection, SmolVLA policy training, and real-world deployment.",
       "Configured the full software stack and performed source-level modifications to enable RGB multi-view perception and language-conditioned manipulation.",
@@ -86,10 +86,10 @@
       "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge",
       "July 01, 2026",
       "Imitation learning for simulated parcel sorting with ManiSkill3, SAPIEN, and a Franka Panda manipulator.",
-      "Developing an imitation-learning solution for a simulated robot parcel-sorting challenge using ManiSkill3, SAPIEN, and a Franka Panda manipulator.",
-      "Parsing and replaying expert demonstration trajectories stored in HDF5/JSON formats across easy, medium, and hard task settings; extracting observations, actions, environment states, and success labels for training and evaluation.",
-      "Establishing behavior-cloning baselines from state and RGB observations, and evaluating advanced visuomotor policies such as Diffusion Policy or ACT to improve generalization across held-out test episodes.",
-      "Building a reproducible training, rollout, and submission pipeline; measuring policy performance by task success rate and preparing competition submissions on Kaggle."
+      "Completed an imitation-learning solution for a simulated robot parcel-sorting challenge using ManiSkill3, SAPIEN, and a Franka Panda manipulator.",
+      "Parsed and replayed expert demonstration trajectories stored in HDF5/JSON formats across easy, medium, and hard task settings, extracting observations, actions, environment states, and success labels for training and evaluation.",
+      "Established behavior-cloning baselines from state and RGB observations and evaluated State Diffusion Policy and RGB ACT policies in local rollout episodes.",
+      "Built the training and rollout pipeline and measured local policy performance by task success rate."
     ],
     "publications/index.html": [
       "Publications",
@@ -98,7 +98,7 @@
       "Yuxiang Luo, Qing Xu, Hai Huang, et al.",
       "arXiv",
       "2025",
-      "Under review at IEEE Transactions on Multimedia after major revision.",
+      "Accepted for publication as a regular paper in IEEE Transactions on Multimedia.",
       "arXiv:2510.10679"
     ],
     "teaching/index.html": [
@@ -107,12 +107,11 @@
       "Kaggle Competition Award",
       "Kaggle",
       "2024",
-      "Silver medal, ranking in the top 0.5% of teams.",
       "Awarded a silver medal in the Kaggle competition Home Credit – Credit Risk Model Stability, ranking in the top 0.5%."
     ],
     "cv-json/index.html": [
       "CV",
-      "Hai HUANG",
+      "Hai Huang",
       "M.Sc. Student in Robotics and Intelligent Systems",
       "quixotehh@gmail.com",
       "https://quixoteh.github.io",
@@ -174,11 +173,11 @@
       "Robotics Project",
       "2026-07-01",
       "Reproduced an end-to-end LeRobot imitation-learning pipeline on the Huaner SO-101 dual-arm platform, covering teleoperation data collection, SmolVLA training, and real-world deployment. Configured RGB multi-view perception and language-conditioned manipulation, and resolved hardware, calibration, and inference failures.",
-      "MuJoCo Playground -- Vision-Based RL for Panda Arm Grasping",
+      "MuJoCo Playground – Vision-Based RL for Panda Arm Grasping",
       "Reinforcement Learning Project",
       "2026-06-01",
       "Reproduced a vision-based Panda grasping task with GPU-parallelized PPO, JAX/Brax, and Madrona-MJX. Tuned reach, grasp, lift, and place rewards plus domain randomization for object pose, lighting, and camera viewpoint.",
-      "Marso Hack Berlin 2026 -- Robot Parcel Sorting Challenge",
+      "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge",
       "Robotics Competition Project",
       "2026-07-01",
       "Built an imitation-learning pipeline for simulated Franka Panda parcel sorting in ManiSkill3, covering color-labeled parcel placement across three difficulty settings, State Diffusion Policy baselines, Easy RGB ACT offline training, and fixed 50-episode evaluation.",
@@ -224,6 +223,9 @@
       "Incoming M.Sc. Student in Robotics and Intelligent Systems",
       "Developing an imitation-learning solution with ManiSkill3, SAPIEN, and a Franka Panda manipulator.",
       "2026-05-01"
+    ],
+    "teaching/index.html": [
+      "Silver medal, ranking in the top 0.5% of teams."
     ]
   },
   "banned": [
@@ -233,6 +235,7 @@
     "Example Award",
     "john.doe@example.com",
     "Natural Science",
-    "Advisor One"
+    "Advisor One",
+    "Hai HUANG"
   ]
 }

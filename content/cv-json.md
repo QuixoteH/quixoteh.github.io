@@ -1,4 +1,4 @@
-## Hai HUANG
+## Hai Huang
 
 **M.Sc. Student in Robotics and Intelligent Systems**
 
@@ -79,7 +79,7 @@ Reproduced an end-to-end LeRobot imitation-learning pipeline on the Huaner SO-10
 
 [View Project](/portfolio/2026-so101/)
 
-### MuJoCo Playground -- Vision-Based RL for Panda Arm Grasping
+### MuJoCo Playground – Vision-Based RL for Panda Arm Grasping
 
 **Reinforcement Learning Project** · 2026-06-01
 
@@ -87,7 +87,7 @@ Reproduced a vision-based Panda grasping task with GPU-parallelized PPO, JAX/Bra
 
 [View Project](/portfolio/2026-mujoco-playground/)
 
-### Marso Hack Berlin 2026 -- Robot Parcel Sorting Challenge
+### Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge
 
 **Robotics Competition Project** · 2026-07-01
 

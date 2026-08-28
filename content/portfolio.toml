@@ -6,10 +6,10 @@ title = "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge"
 subtitle = "Imitation learning for simulated parcel sorting with ManiSkill3, SAPIEN, and a Franka Panda manipulator."
 date = "July 01, 2026"
 content = """
-- Developing an imitation-learning solution for a simulated robot parcel-sorting challenge using ManiSkill3, SAPIEN, and a Franka Panda manipulator.
-- Parsing and replaying expert demonstration trajectories stored in HDF5/JSON formats across easy, medium, and hard task settings; extracting observations, actions, environment states, and success labels for training and evaluation.
-- Establishing behavior-cloning baselines from state and RGB observations, and evaluating advanced visuomotor policies such as Diffusion Policy or ACT to improve generalization across held-out test episodes.
-- Building a reproducible training, rollout, and submission pipeline; measuring policy performance by task success rate and preparing competition submissions on Kaggle.
+- Completed an imitation-learning solution for a simulated robot parcel-sorting challenge using ManiSkill3, SAPIEN, and a Franka Panda manipulator.
+- Parsed and replayed expert demonstration trajectories stored in HDF5/JSON formats across easy, medium, and hard task settings, extracting observations, actions, environment states, and success labels for training and evaluation.
+- Established behavior-cloning baselines from state and RGB observations and evaluated State Diffusion Policy and RGB ACT policies in local rollout episodes.
+- Built the training and rollout pipeline and measured local policy performance by task success rate.
 """
 
 [[items]]
@@ -25,7 +25,7 @@ content = """
 [[items]]
 title = "SO-101 Real-World Robotic Learning with LeRobot"
 subtitle = "End-to-end imitation learning on the Huaner SO-101 dual-arm platform using LeRobot."
-date = "May 01, 2026"
+date = "July 01, 2026"
 content = """
 - Reproduced an end-to-end imitation-learning pipeline on the Huaner SO-101 dual-arm platform using the LeRobot framework, covering teleoperation data collection, SmolVLA policy training, and real-world deployment.
 - Configured the full software stack and performed source-level modifications to enable RGB multi-view perception and language-conditioned manipulation.

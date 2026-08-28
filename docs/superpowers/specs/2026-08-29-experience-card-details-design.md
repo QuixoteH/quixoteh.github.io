@@ -33,7 +33,7 @@ No new component or Experience-specific data model is needed.
 - Subtitle: `China Unicom Chengdu Branch, Digital Technology Center`
 - Date: `07/2025 – 09/2025`
 - Content: `Chengdu, China`
-- Tags: `AI Solution`, `IoT Solution`
+- Tags: `AI Solutions`, `IoT Solutions`
 - Image: `/logos/china-unicom.png`
 
 The China Unicom role, organization, location, date, and keywords are derived from the latest CV source. The A*STAR institution, start date, current status, and research domain follow the user's confirmed attachment information and current research interests without adding supervisor or project-success claims.
