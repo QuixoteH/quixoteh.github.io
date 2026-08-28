@@ -26,9 +26,9 @@ export default function News({ items, title }: NewsProps) {
             <h2 className="text-2xl font-serif font-bold text-primary mb-4">{resolvedTitle}</h2>
             <div className="space-y-3">
                 {items.map((item, index) => (
-                    <div key={index} className="flex items-start space-x-3">
-                        <span className="text-xs text-neutral-500 mt-1 w-16 flex-shrink-0">{item.date}</span>
-                        <p className="text-sm text-neutral-700">{item.content}</p>
+                    <div key={index} className="grid grid-cols-[5.5rem_minmax(0,1fr)] items-start gap-3">
+                        <span className="mt-0.5 text-xs text-neutral-500">{item.date}</span>
+                        <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">{item.content}</p>
                     </div>
                 ))}
             </div>

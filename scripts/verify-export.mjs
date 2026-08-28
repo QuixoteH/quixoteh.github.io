@@ -18,6 +18,7 @@ const decodeHtml = (value) => value
   .replace(/&lt;/g, '<')
   .replace(/&gt;/g, '>')
   .replace(/\s+/g, ' ')
+  .replace(/\s+([,.;:])/g, '$1')
   .trim();
 
 const failures = [];

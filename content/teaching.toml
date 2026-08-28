@@ -1,0 +1,9 @@
+type = "card"
+title = "Awards"
+description = "Silver medal, ranking in the top 0.5% of teams."
+
+[[items]]
+title = "Silver Medal – Home Credit: Credit Risk Model Stability"
+subtitle = "Kaggle Competition Award | Kaggle"
+date = "2024"
+content = "Awarded a silver medal in the Kaggle competition **Home Credit – Credit Risk Model Stability**, ranking in the top 0.5%."

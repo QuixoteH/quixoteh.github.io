@@ -97,10 +97,8 @@
       "SG",
       "GitHub",
       "QuixoteH",
-      "https://github.com/QuixoteH",
       "LinkedIn",
       "quixoteh",
-      "https://www.linkedin.com/in/quixoteh",
       "Robot manipulation researcher focusing on reinforcement learning and vision-language-action models.",
       "China Unicom Chengdu Branch, Digital Technology Center",
       "AI Solutions Engineer Intern",
@@ -148,7 +146,6 @@
       "MSM-Seg: A Modality-and-Slice Memory Framework with Category-Agnostic Prompting for Multi-Modal Brain Tumor Segmentation",
       "arXiv:2510.10679; under review at IEEE TMM after major revision",
       "2025-10-14",
-      "https://arxiv.org/abs/2510.10679",
       "Yuxiang Luo, Qing Xu, Hai Huang, et al.",
       "SO-101 Real-World Robotic Learning with LeRobot",
       "Robotics Project",
@@ -179,6 +176,11 @@
       "src=\"/profile.png\""
     ],
     "publications/index.html": [
+      "href=\"https://arxiv.org/abs/2510.10679\""
+    ],
+    "cv-json/index.html": [
+      "href=\"https://github.com/QuixoteH\"",
+      "href=\"https://www.linkedin.com/in/quixoteh\"",
       "href=\"https://arxiv.org/abs/2510.10679\""
     ]
   },

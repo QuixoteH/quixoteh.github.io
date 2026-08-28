@@ -97,8 +97,8 @@
   --font-size-9xl: 8rem;
   
   /* Letter spacing */
-  --letter-spacing-tighter: -0.05em;
-  --letter-spacing-tight: -0.025em;
+  --letter-spacing-tighter: 0em;
+  --letter-spacing-tight: 0em;
   --letter-spacing-normal: 0em;
   --letter-spacing-wide: 0.025em;
   --letter-spacing-wider: 0.05em;

@@ -86,6 +86,7 @@ export function parseBibTeX(bibtexContent: string, locale?: string): Publication
       pages: tags.pages,
       doi: tags.doi,
       url: tags.url,
+      arxivId: tags.eprint,
       code: tags.code,
       abstract: cleanBibTeXString(tags.abstract),
       description: cleanBibTeXString(tags.description || tags.note),

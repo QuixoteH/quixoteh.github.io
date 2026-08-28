@@ -197,7 +197,7 @@ export default function PublicationsList({ config, publications, embedded = fals
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.4, delay: 0.1 * index }}
-                            className="bg-white dark:bg-neutral-900 p-6 rounded-xl shadow-sm border border-neutral-200 dark:border-neutral-800 hover:shadow-md transition-all duration-200"
+                            className="rounded-lg border border-neutral-200 bg-white p-6 shadow-sm transition-shadow duration-200 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900"
                         >
                             <div className="flex flex-col md:flex-row gap-6">
                                 {pub.preview && (
@@ -249,6 +249,16 @@ export default function PublicationsList({ config, publications, embedded = fals
                                                 className="inline-flex items-center px-3 py-1 rounded-md text-xs font-medium bg-neutral-100 dark:bg-neutral-800 text-neutral-700 dark:text-neutral-300 hover:bg-accent hover:text-white transition-colors"
                                             >
                                                 DOI
+                                            </a>
+                                        )}
+                                        {pub.url && (
+                                            <a
+                                                href={pub.url}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="inline-flex items-center rounded-md bg-neutral-100 px-3 py-1 text-xs font-medium text-neutral-700 transition-colors hover:bg-accent hover:text-white dark:bg-neutral-800 dark:text-neutral-300"
+                                            >
+                                                {pub.arxivId ? `arXiv:${pub.arxivId}` : 'Paper'}
                                             </a>
                                         )}
                                         {pub.code && (

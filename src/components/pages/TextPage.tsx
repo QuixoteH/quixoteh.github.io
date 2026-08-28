@@ -24,22 +24,22 @@ export default function TextPage({ config, content, embedded = false }: TextPage
                     {config.description}
                 </p>
             )}
-            <div className="text-neutral-700 dark:text-neutral-600 leading-relaxed">
+            <div className="break-words text-neutral-700 dark:text-neutral-300 leading-relaxed">
                 <ReactMarkdown
                     components={{
                         h1: ({ children }) => <h1 className="text-3xl font-serif font-bold text-primary mt-8 mb-4">{children}</h1>,
                         h2: ({ children }) => <h2 className="text-2xl font-serif font-bold text-primary mt-8 mb-4 border-b border-neutral-200 dark:border-neutral-800 pb-2">{children}</h2>,
                         h3: ({ children }) => <h3 className="text-xl font-semibold text-primary mt-6 mb-3">{children}</h3>,
                         p: ({ children }) => <p className="mb-4 last:mb-0">{children}</p>,
-                        ul: ({ children }) => <ul className="list-disc list-inside mb-4 space-y-1 ml-4">{children}</ul>,
-                        ol: ({ children }) => <ol className="list-decimal list-inside mb-4 space-y-1 ml-4">{children}</ol>,
+                        ul: ({ children }) => <ul className="mb-4 list-disc space-y-1 pl-5">{children}</ul>,
+                        ol: ({ children }) => <ol className="mb-4 list-decimal space-y-1 pl-5">{children}</ol>,
                         li: ({ children }) => <li className="mb-1">{children}</li>,
                         a: ({ ...props }) => (
                             <a
                                 {...props}
                                 target="_blank"
                                 rel="noopener noreferrer"
-                                className="text-accent font-medium transition-all duration-200 rounded hover:bg-accent/10 hover:shadow-sm"
+                                className="break-all rounded font-medium text-accent transition-colors duration-200 hover:text-accent-dark"
                             />
                         ),
                         blockquote: ({ children }) => (
