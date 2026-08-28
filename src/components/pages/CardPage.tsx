@@ -55,7 +55,7 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                         initial={false}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: 0.1 * index }}
-                        className={`rounded-lg border border-neutral-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900 ${embedded ? "flex gap-4 px-4 py-3" : "p-6"}`}
+                        className={`rounded-lg border border-neutral-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900 ${embedded ? "flex gap-4 px-3.5 py-3" : "p-6"}`}
                     >
                         {item.image && (
                             <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-neutral-50 dark:bg-neutral-800/50">
