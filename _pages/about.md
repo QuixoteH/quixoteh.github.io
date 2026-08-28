@@ -9,7 +9,7 @@ redirect_from:
 
 # Biography
 
-Hai Huang (Student Member, IEEE) received the B.Eng. degree in Internet of Things Engineering from Northeast Agricultural University, Harbin, China, in 2026. He is currently pursuing the M.Sc. degree in Robotics and Intelligent Systems at Nanyang Technological University, Singapore. He is conducting dissertation research with the Singapore Institute of Manufacturing Technology (SIMTech), Agency for Science, Technology and Research (A\*STAR). Previously, he was an AI Solutions Engineer Intern with the Digital Technology Center, China Unicom Chengdu Branch. His research interests focus on robot learning and manipulation.
+Hai Huang (Student Member, IEEE) received the B.Eng. degree in Internet of Things Engineering from Northeast Agricultural University, Harbin, China, in 2026. He is currently pursuing the M.Sc. degree in Robotics and Intelligent Systems at Nanyang Technological University, Singapore. He is conducting dissertation research with the Singapore Institute of Manufacturing Technology (SIMTech), Agency for Science, Technology and Research (A\*STAR). Previously, he was an AI Solutions Engineer Intern at the Digital Technology Center, China Unicom Chengdu Branch. His research interests focus on robot learning and manipulation.
 
 ### Interests
 
