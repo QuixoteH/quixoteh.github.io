@@ -1,5 +1,5 @@
 type = "about"
-title = "Biography"
+title = "About"
 
 [profile]
 research_interests = [
@@ -9,17 +9,22 @@ research_interests = [
 ]
 
 [[sections]]
-id = "biography"
+id = "about"
 type = "markdown"
 source = "bio.md"
-title = "Biography"
+title = "About"
 
 [[sections]]
-id = "featured_publications"
-type = "publications"
-title = "Selected Publications"
-filter = "selected"
-limit = 1
+id = "education"
+type = "card"
+source = "education.toml"
+title = "Education"
+
+[[sections]]
+id = "experience"
+type = "card"
+source = "experience.toml"
+title = "Experience"
 
 [[sections]]
 id = "news"

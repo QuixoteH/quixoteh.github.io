@@ -2,7 +2,6 @@
 
 import Profile from '@/components/home/Profile';
 import About from '@/components/home/About';
-import SelectedPublications from '@/components/home/SelectedPublications';
 import News, { NewsItem } from '@/components/home/News';
 import PublicationsList from '@/components/publications/PublicationsList';
 import TextPage from '@/components/pages/TextPage';
@@ -14,7 +13,7 @@ import { useLocaleStore } from '@/lib/stores/localeStore';
 
 interface SectionConfig {
   id: string;
-  type: 'markdown' | 'publications' | 'list';
+  type: 'markdown' | 'publications' | 'list' | 'card';
   title?: string;
   source?: string;
   filter?: string;
@@ -22,6 +21,7 @@ interface SectionConfig {
   content?: string;
   publications?: Publication[];
   items?: NewsItem[];
+  config?: CardPageConfig;
 }
 
 type PageData =
@@ -77,15 +77,6 @@ export default function HomePageClient({ dataByLocale, defaultLocale }: HomePage
                         title={section.title}
                       />
                     );
-                  case 'publications':
-                    return (
-                      <SelectedPublications
-                        key={section.id}
-                        publications={section.publications || []}
-                        title={section.title}
-                        enableOnePageMode={data.enableOnePageMode}
-                      />
-                    );
                   case 'list':
                     return (
                       <News
@@ -94,6 +85,14 @@ export default function HomePageClient({ dataByLocale, defaultLocale }: HomePage
                         title={section.title}
                       />
                     );
+                  case 'card':
+                    return section.config ? (
+                      <CardPage
+                        key={section.id}
+                        config={section.config}
+                        embedded={true}
+                      />
+                    ) : null;
                   default:
                     return null;
                 }

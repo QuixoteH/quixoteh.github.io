@@ -6,7 +6,7 @@ last_updated = "August 29, 2026"
 
 [author]
 name = "Hai HUANG"
-title = ""
+title = "M.Sc. Student in Robotics and Intelligent Systems"
 institution = "Nanyang Technological University"
 avatar = "/profile.png"
 
@@ -30,6 +30,12 @@ switcher = false
 
 [i18n.labels]
 en = "English"
+
+[[navigation]]
+title = "About"
+type = "page"
+target = "about"
+href = "/"
 
 [[navigation]]
 title = "Research"
