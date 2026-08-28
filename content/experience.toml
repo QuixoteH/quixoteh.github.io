@@ -2,9 +2,17 @@ type = "card"
 title = "Experience"
 
 [[items]]
-title = "A*STAR Research Attachment"
+title = "Research Attachment"
+subtitle = "Singapore Institute of Manufacturing Technology (SIMTech), A*STAR"
+date = "08/2026 – Present"
+content = "Singapore"
 image = "/logos/astar.png"
+tags = ["Force-aware Robot Learning", "Robot Manipulation"]
 
 [[items]]
-title = "China Unicom AI Solutions Engineer Intern"
+title = "AI Solutions Engineer Intern"
+subtitle = "China Unicom Chengdu Branch, Digital Technology Center"
+date = "07/2025 – 09/2025"
+content = "Chengdu, China"
 image = "/logos/china-unicom.png"
+tags = ["AI Solution", "IoT Solution"]

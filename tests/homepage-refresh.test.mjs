@@ -10,6 +10,7 @@ const readToml = (file) => parse(read(file));
 
 test('homepage config matches the approved GentleFress structure', () => {
   const config = readToml('content/config.toml');
+  assert.equal(config.site.favicon, '/favicon-book.svg');
   assert.equal(config.author.name, 'Hai Huang');
   assert.equal(config.author.title, 'M.S. Student in Robotics');
   assert.equal(config.social.email, 'quixotehh@gmail.com');
@@ -58,14 +59,25 @@ test('education and experience contain only approved facts', () => {
 
   const experience = readToml('content/experience.toml');
   assert.deepEqual(experience.items, [
-    { title: 'A*STAR Research Attachment', image: '/logos/astar.png' },
     {
-      title: 'China Unicom AI Solutions Engineer Intern',
+      title: 'Research Attachment',
+      subtitle: 'Singapore Institute of Manufacturing Technology (SIMTech), A*STAR',
+      date: '08/2026 – Present',
+      content: 'Singapore',
+      image: '/logos/astar.png',
+      tags: ['Force-aware Robot Learning', 'Robot Manipulation'],
+    },
+    {
+      title: 'AI Solutions Engineer Intern',
+      subtitle: 'China Unicom Chengdu Branch, Digital Technology Center',
+      date: '07/2025 – 09/2025',
+      content: 'Chengdu, China',
       image: '/logos/china-unicom.png',
+      tags: ['AI Solution', 'IoT Solution'],
     },
   ]);
   for (const item of experience.items) {
-    assert.deepEqual(Object.keys(item), ['title', 'image']);
+    assert.deepEqual(Object.keys(item), ['title', 'subtitle', 'date', 'content', 'image', 'tags']);
   }
 });
 
@@ -78,6 +90,14 @@ test('profile email and Experience logo assets are wired', () => {
   for (const logo of ['public/logos/astar.png', 'public/logos/china-unicom.png']) {
     assert.ok(fs.statSync(path.join(root, logo)).size > 0);
   }
+
+  const astar = fs.readFileSync(path.join(root, 'public/logos/astar.png'));
+  assert.deepEqual([astar.readUInt32BE(16), astar.readUInt32BE(20)], [675, 675]);
+
+  const favicon = read('public/favicon-book.svg');
+  assert.match(favicon, /<title>Open book<\/title>/);
+  assert.match(favicon, /M12 7v14/);
+  assert.match(favicon, /M3 18a1 1 0 0 1-1-1V4/);
 });
 
 test('homepage loader and renderer support card sections', () => {
@@ -98,8 +118,7 @@ test('GentleFress visual structure and light-default theme are configured', () =
 
   assert.match(card, /item\.image/);
   assert.match(card, /h-12 w-12/);
-  assert.match(card, /isTitleOnly/);
-  assert.match(card, /text-xs min-\[360px\]:whitespace-nowrap sm:text-base/);
+  assert.doesNotMatch(card, /isTitleOnly/);
   assert.match(news, /max-h-80/);
   assert.match(news, /sm:max-h-96/);
   assert.match(news, /overflow-y-auto/);

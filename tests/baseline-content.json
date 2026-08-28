@@ -30,8 +30,18 @@
       "Sep. 2022 - Jun. 2026",
       "College of Intelligent Science and Engineering",
       "Experience",
-      "A*STAR Research Attachment",
-      "China Unicom AI Solutions Engineer Intern",
+      "Research Attachment",
+      "Singapore Institute of Manufacturing Technology (SIMTech), A*STAR",
+      "08/2026 – Present",
+      "Singapore",
+      "Force-aware Robot Learning",
+      "Robot Manipulation",
+      "AI Solutions Engineer Intern",
+      "China Unicom Chengdu Branch, Digital Technology Center",
+      "07/2025 – 09/2025",
+      "Chengdu, China",
+      "AI Solution",
+      "IoT Solution",
       "News",
       "[Aug 2026]",
       "MSM-Seg was accepted for publication as a regular paper in IEEE Transactions on Multimedia.",
@@ -187,6 +197,7 @@
       "href=\"https://github.com/QuixoteH\"",
       "href=\"https://www.linkedin.com/in/quixoteh\"",
       "href=\"mailto:quixotehh@gmail.com\"",
+      "href=\"/favicon-book.svg\"",
       "src=\"/profile.png\"",
       "src=\"/logos/ntu.svg\"",
       "src=\"/logos/neau.png\"",
@@ -205,7 +216,9 @@
   "forbiddenByRoute": {
     "index.html": [
       "Selected Publications",
-      "GPA: 85/100"
+      "GPA: 85/100",
+      "A*STAR Research Attachment",
+      "China Unicom AI Solutions Engineer Intern"
     ],
     "cv-json/index.html": [
       "Incoming M.Sc. Student in Robotics and Intelligent Systems",
