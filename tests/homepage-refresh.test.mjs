@@ -72,3 +72,22 @@ test('homepage loader and renderer support card sections', () => {
   assert.match(client, /case 'card'/);
   assert.doesNotMatch(client, /SelectedPublications/);
 });
+
+test('GentleFress visual structure and light-default theme are configured', () => {
+  const card = read('src/components/pages/CardPage.tsx');
+  const news = read('src/components/home/News.tsx');
+  const store = read('src/lib/stores/themeStore.ts');
+  const layout = read('src/app/layout.tsx');
+  const css = read('src/app/globals.css');
+
+  assert.match(card, /item\.image/);
+  assert.match(card, /h-12 w-12/);
+  assert.match(news, /max-h-80/);
+  assert.match(news, /sm:max-h-96/);
+  assert.match(news, /overflow-y-auto/);
+  assert.match(news, /ReactMarkdown/);
+  assert.match(store, /theme: 'light'/);
+  assert.match(layout, /parsed\?\.state\?\.theme \|\| 'light'/);
+  assert.match(css, /--accent: #7D6B8C;/);
+  assert.match(css, /--accent-dark: #675873;/);
+});

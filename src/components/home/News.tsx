@@ -1,6 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 import { useMessages } from '@/lib/i18n/useMessages';
 
 export interface NewsItem {
@@ -23,14 +24,35 @@ export default function News({ items, title }: NewsProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
         >
-            <h2 className="text-2xl font-serif font-bold text-primary mb-4">{resolvedTitle}</h2>
-            <div className="space-y-3">
+            <h2 className="mb-4 font-serif text-3xl font-bold text-primary sm:text-4xl">{resolvedTitle}</h2>
+            <div className="max-h-80 overflow-y-auto overscroll-y-contain scroll-smooth rounded-lg border border-neutral-200/90 bg-neutral-50/60 px-4 py-3 pr-2 sm:max-h-96 dark:border-neutral-700/80 dark:bg-neutral-900/30">
+              <ul className="space-y-4 pr-1">
                 {items.map((item, index) => (
-                    <div key={index} className="grid grid-cols-[5.5rem_minmax(0,1fr)] items-start gap-3">
-                        <span className="mt-0.5 text-xs text-neutral-500">{item.date}</span>
-                        <p className="text-sm leading-relaxed text-neutral-700 dark:text-neutral-300">{item.content}</p>
-                    </div>
+                    <li
+                        key={`${item.date}-${index}`}
+                        className="flex flex-col gap-1 border-b border-neutral-200/60 pb-4 last:border-b-0 last:pb-0 sm:flex-row sm:items-start sm:gap-4 dark:border-neutral-700/50"
+                    >
+                        <span className="text-sm font-medium tabular-nums text-neutral-500 sm:w-24 sm:flex-shrink-0 sm:text-base">{item.date}</span>
+                        <div className="min-w-0 text-base leading-relaxed text-neutral-800 sm:text-lg dark:text-neutral-200">
+                            <ReactMarkdown
+                                components={{
+                                    p: ({ children }) => <span className="inline">{children}</span>,
+                                    a: ({ ...props }) => (
+                                        <a
+                                            {...props}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="font-medium text-accent underline-offset-2 hover:underline"
+                                        />
+                                    ),
+                                }}
+                            >
+                                {item.content}
+                            </ReactMarkdown>
+                        </div>
+                    </li>
                 ))}
+              </ul>
             </div>
         </motion.section>
     );

@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { motion } from 'framer-motion';
 import ReactMarkdown from 'react-markdown';
 import { CardPageConfig } from '@/types/page';
@@ -54,35 +55,49 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                         initial={false}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.4, delay: 0.1 * index }}
-                        className={`rounded-lg border border-neutral-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900 ${embedded ? "p-4" : "p-6"}`}
+                        className={`rounded-lg border border-neutral-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900 ${embedded ? "flex gap-4 px-4 py-3" : "p-6"}`}
                     >
-                        <div className="mb-2 grid min-w-0 grid-cols-1 items-start gap-2 sm:grid-cols-[minmax(0,1fr)_auto] sm:gap-4">
-                            <h3 className={`${embedded ? "text-lg" : "text-xl"} min-w-0 break-words font-semibold leading-snug text-primary`}>{item.title}</h3>
-                            {item.date && (
-                                <span className="w-fit whitespace-nowrap rounded bg-neutral-100 px-2 py-1 text-sm font-medium text-neutral-500 dark:bg-neutral-800">
-                                    {item.date}
-                                </span>
+                        {item.image && (
+                            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-neutral-50 dark:bg-neutral-800/50">
+                                <Image
+                                    src={item.image}
+                                    alt=""
+                                    width={32}
+                                    height={32}
+                                    className="h-8 w-8 object-contain"
+                                    aria-hidden="true"
+                                />
+                            </div>
+                        )}
+                        <div className="min-w-0 flex-1">
+                            <div className="mb-2 flex min-w-0 flex-col items-start gap-2 sm:flex-row sm:justify-between">
+                                <h3 className={`${embedded ? "text-base" : "text-xl"} min-w-0 break-words font-semibold leading-snug text-primary`}>{item.title}</h3>
+                                {item.date && (
+                                    <span className={`${embedded ? "text-xs" : "text-sm"} w-fit flex-shrink-0 whitespace-nowrap rounded bg-neutral-100 px-2 py-1 font-medium text-neutral-500 dark:bg-neutral-800`}>
+                                        {item.date}
+                                    </span>
+                                )}
+                            </div>
+                            {item.subtitle && (
+                                <p className={`${embedded ? "text-sm" : "text-base"} mb-2 font-medium text-accent`}>{item.subtitle}</p>
+                            )}
+                            {item.content && (
+                                <div className={`${embedded ? "text-sm" : "text-base"} break-words leading-relaxed text-neutral-600 dark:text-neutral-400`}>
+                                    <ReactMarkdown components={markdownComponents}>
+                                        {item.content}
+                                    </ReactMarkdown>
+                                </div>
+                            )}
+                            {item.tags && (
+                                <div className="mt-4 flex flex-wrap gap-2">
+                                    {item.tags.map(tag => (
+                                        <span key={tag} className="rounded border border-neutral-100 bg-neutral-50 px-2 py-1 text-xs text-neutral-500 dark:border-neutral-800 dark:bg-neutral-800/50">
+                                            {tag}
+                                        </span>
+                                    ))}
+                                </div>
                             )}
                         </div>
-                        {item.subtitle && (
-                            <p className={`${embedded ? "text-sm" : "text-base"} text-accent font-medium mb-3`}>{item.subtitle}</p>
-                        )}
-                        {item.content && (
-                            <div className={`${embedded ? "text-sm" : "text-base"} break-words leading-relaxed text-neutral-600 dark:text-neutral-400`}>
-                                <ReactMarkdown components={markdownComponents}>
-                                    {item.content}
-                                </ReactMarkdown>
-                            </div>
-                        )}
-                        {item.tags && (
-                            <div className="flex flex-wrap gap-2 mt-4">
-                                {item.tags.map(tag => (
-                                    <span key={tag} className="text-xs text-neutral-500 bg-neutral-50 dark:bg-neutral-800/50 px-2 py-1 rounded border border-neutral-100 dark:border-neutral-800">
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        )}
                     </motion.div>
                 ))}
             </div>
