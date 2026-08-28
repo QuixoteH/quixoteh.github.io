@@ -19,7 +19,7 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
 
   return (
     <motion.aside
-      initial={{ opacity: 0, y: 16 }}
+      initial={false}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.45 }}
       className="lg:sticky lg:top-28"

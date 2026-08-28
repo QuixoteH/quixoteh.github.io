@@ -55,6 +55,12 @@ for (const [route, required] of Object.entries(fixture.requiredHtml)) {
   }
 }
 
+for (const [route, page] of renderedHtml) {
+  if (/style="[^"]*opacity:0/.test(page)) {
+    failures.push(`Server-rendered content is hidden on ${route}`);
+  }
+}
+
 const corpus = [...renderedText.values()].join(' ');
 for (const text of fixture.banned) {
   if (corpus.includes(text)) {
