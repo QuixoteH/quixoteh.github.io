@@ -9,16 +9,29 @@
   "required": {
     "index.html": [
       "Hai HUANG",
+      "M.Sc. Student in Robotics and Intelligent Systems",
       "Singapore",
       "Nanyang Technological University",
       "GitHub",
       "LinkedIn",
-      "Biography",
+      "About",
       "Hai Huang (Student Member, IEEE) received the B.Eng. degree in Internet of Things Engineering from Northeast Agricultural University, Harbin, China, in 2026. He is currently pursuing the M.Sc. degree in Robotics and Intelligent Systems at Nanyang Technological University, Singapore. He is conducting dissertation research with the Singapore Institute of Manufacturing Technology (SIMTech), Agency for Science, Technology and Research (A*STAR). Previously, he was an AI Solutions Engineer Intern at the Digital Technology Center, China United Network Communications Group Co., Ltd. His research interests focus on robot learning and manipulation.",
       "Interests",
       "Force-aware Robot Learning",
       "Robot Manipulation",
       "Vision-Language-Action Models",
+      "Education",
+      "M.S. in Robotics and Intelligent Systems",
+      "Aug. 2026 - Jan. 2028 (Expected)",
+      "School of Mechanical and Aerospace Engineering",
+      "B.E. in Internet of Things",
+      "Northeast Agricultural University",
+      "Sep. 2022 - Jun. 2026",
+      "College of Intelligent Science and Engineering",
+      "GPA: 85/100",
+      "Experience",
+      "A*STAR Research Attachment",
+      "China Unicom AI Solutions Engineer Intern",
       "News",
       "[Aug 2026]",
       "MSM-Seg was accepted for publication as a regular paper in IEEE Transactions on Multimedia.",
@@ -90,7 +103,7 @@
     "cv-json/index.html": [
       "CV",
       "Hai HUANG",
-      "Incoming M.Sc. Student in Robotics and Intelligent Systems",
+      "M.Sc. Student in Robotics and Intelligent Systems",
       "quixotehh@gmail.com",
       "https://quixoteh.github.io",
       "Singapore",
@@ -149,7 +162,7 @@
       "Yuxiang Luo, Qing Xu, Hai Huang, et al.",
       "SO-101 Real-World Robotic Learning with LeRobot",
       "Robotics Project",
-      "2026-05-01",
+      "2026-07-01",
       "Reproduced an end-to-end LeRobot imitation-learning pipeline on the Huaner SO-101 dual-arm platform, covering teleoperation data collection, SmolVLA training, and real-world deployment. Configured RGB multi-view perception and language-conditioned manipulation, and resolved hardware, calibration, and inference failures.",
       "MuJoCo Playground -- Vision-Based RL for Panda Arm Grasping",
       "Reinforcement Learning Project",
@@ -158,7 +171,7 @@
       "Marso Hack Berlin 2026 -- Robot Parcel Sorting Challenge",
       "Robotics Competition Project",
       "2026-07-01",
-      "Developing an imitation-learning solution with ManiSkill3, SAPIEN, and a Franka Panda manipulator. Parsing HDF5/JSON demonstrations, establishing state and RGB behavior-cloning baselines, evaluating Diffusion Policy or ACT, and building reproducible training, rollout, evaluation, and submission pipelines.",
+      "Built an imitation-learning pipeline for simulated Franka Panda parcel sorting in ManiSkill3, covering color-labeled parcel placement across three difficulty settings, State Diffusion Policy baselines, Easy RGB ACT offline training, and fixed 50-episode evaluation.",
       "MSM-Seg: Multi-Modal Brain Tumor Segmentation",
       "Research Experience",
       "2025-03-01",
@@ -173,7 +186,9 @@
     "index.html": [
       "href=\"https://github.com/QuixoteH\"",
       "href=\"https://www.linkedin.com/in/quixoteh\"",
-      "src=\"/profile.png\""
+      "src=\"/profile.png\"",
+      "src=\"/logos/ntu.svg\"",
+      "src=\"/logos/neau.png\""
     ],
     "publications/index.html": [
       "href=\"https://arxiv.org/abs/2510.10679\""
@@ -182,6 +197,16 @@
       "href=\"https://github.com/QuixoteH\"",
       "href=\"https://www.linkedin.com/in/quixoteh\"",
       "href=\"https://arxiv.org/abs/2510.10679\""
+    ]
+  },
+  "forbiddenByRoute": {
+    "index.html": [
+      "Selected Publications"
+    ],
+    "cv-json/index.html": [
+      "Incoming M.Sc. Student in Robotics and Intelligent Systems",
+      "Developing an imitation-learning solution with ManiSkill3, SAPIEN, and a Franka Panda manipulator.",
+      "2026-05-01"
     ]
   },
   "banned": [

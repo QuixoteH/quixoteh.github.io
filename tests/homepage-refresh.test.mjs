@@ -91,3 +91,15 @@ test('GentleFress visual structure and light-default theme are configured', () =
   assert.match(css, /--accent: #7D6B8C;/);
   assert.match(css, /--accent-dark: #675873;/);
 });
+
+test('CV changes only confirmed stale facts', () => {
+  const cv = read('content/cv-json.md');
+  assert.match(cv, /\*\*M\.Sc\. Student in Robotics and Intelligent Systems\*\*/);
+  assert.doesNotMatch(cv, /Incoming M\.Sc\. Student/);
+  assert.match(cv, /### M\.S\. in Robotics and Intelligent Systems/);
+  assert.match(cv, /### B\.E\. in Internet of Things/);
+  assert.match(cv, /SO-101 Real-World Robotic Learning with LeRobot[\s\S]*?\*\*Robotics Project\*\* · 2026-07-01/);
+  assert.match(cv, /Built an imitation-learning pipeline for simulated Franka Panda parcel sorting in ManiSkill3/);
+  assert.doesNotMatch(cv, /Developing an imitation-learning solution/);
+  assert.match(cv, /under review at IEEE TMM after major revision/);
+});

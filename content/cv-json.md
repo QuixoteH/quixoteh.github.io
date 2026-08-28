@@ -1,6 +1,6 @@
 ## Hai HUANG
 
-**Incoming M.Sc. Student in Robotics and Intelligent Systems**
+**M.Sc. Student in Robotics and Intelligent Systems**
 
 [quixotehh@gmail.com](mailto:quixotehh@gmail.com)\
 <https://quixoteh.github.io>\
@@ -73,7 +73,7 @@ Yuxiang Luo, Qing Xu, Hai Huang, et al.\
 
 ### SO-101 Real-World Robotic Learning with LeRobot
 
-**Robotics Project** · 2026-05-01
+**Robotics Project** · 2026-07-01
 
 Reproduced an end-to-end LeRobot imitation-learning pipeline on the Huaner SO-101 dual-arm platform, covering teleoperation data collection, SmolVLA training, and real-world deployment. Configured RGB multi-view perception and language-conditioned manipulation, and resolved hardware, calibration, and inference failures.
 
@@ -91,7 +91,7 @@ Reproduced a vision-based Panda grasping task with GPU-parallelized PPO, JAX/Bra
 
 **Robotics Competition Project** · 2026-07-01
 
-Developing an imitation-learning solution with ManiSkill3, SAPIEN, and a Franka Panda manipulator. Parsing HDF5/JSON demonstrations, establishing state and RGB behavior-cloning baselines, evaluating Diffusion Policy or ACT, and building reproducible training, rollout, evaluation, and submission pipelines.
+Built an imitation-learning pipeline for simulated Franka Panda parcel sorting in ManiSkill3, covering color-labeled parcel placement across three difficulty settings, State Diffusion Policy baselines, Easy RGB ACT offline training, and fixed 50-episode evaluation.
 
 [View Project](/portfolio/2026-marso/)
 

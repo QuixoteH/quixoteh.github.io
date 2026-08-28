@@ -55,6 +55,15 @@ for (const [route, required] of Object.entries(fixture.requiredHtml)) {
   }
 }
 
+for (const [route, forbidden] of Object.entries(fixture.forbiddenByRoute || {})) {
+  const page = renderedText.get(route) || '';
+  for (const text of forbidden) {
+    if (page.includes(text)) {
+      failures.push(`Forbidden on ${route}: ${text}`);
+    }
+  }
+}
+
 for (const [route, page] of renderedHtml) {
   if (/style="[^"]*opacity:0/.test(page)) {
     failures.push(`Server-rendered content is hidden on ${route}`);
