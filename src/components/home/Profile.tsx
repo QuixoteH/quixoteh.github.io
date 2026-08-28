@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Github, Linkedin, MapPin } from 'lucide-react';
+import { Github, Linkedin, Mail, MapPin } from 'lucide-react';
 import type { SiteConfig } from '@/lib/config';
 
 interface ProfileProps {
@@ -13,8 +13,9 @@ interface ProfileProps {
 
 export default function Profile({ author, social, researchInterests }: ProfileProps) {
   const socialLinks = [
-    ...(social.github ? [{ name: 'GitHub', href: social.github, icon: Github }] : []),
-    ...(social.linkedin ? [{ name: 'LinkedIn', href: social.linkedin, icon: Linkedin }] : []),
+    ...(social.email ? [{ name: 'Email', href: `mailto:${social.email}`, icon: Mail, external: false }] : []),
+    ...(social.github ? [{ name: 'GitHub', href: social.github, icon: Github, external: true }] : []),
+    ...(social.linkedin ? [{ name: 'LinkedIn', href: social.linkedin, icon: Linkedin, external: true }] : []),
   ];
 
   return (
@@ -54,12 +55,12 @@ export default function Profile({ author, social, researchInterests }: ProfilePr
       </div>
 
       <div className="mb-6 flex justify-center gap-2">
-        {socialLinks.map(({ name, href, icon: Icon }) => (
+        {socialLinks.map(({ name, href, icon: Icon, external }) => (
           <a
             key={name}
             href={href}
-            target="_blank"
-            rel="noopener noreferrer"
+            target={external ? '_blank' : undefined}
+            rel={external ? 'noopener noreferrer' : undefined}
             className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-neutral-200 text-neutral-600 transition-colors hover:border-accent hover:text-accent dark:border-neutral-700 dark:text-neutral-400"
             aria-label={name}
             title={name}

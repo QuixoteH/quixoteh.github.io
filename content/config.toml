@@ -5,12 +5,13 @@ favicon = "/favicon.svg"
 last_updated = "August 29, 2026"
 
 [author]
-name = "Hai HUANG"
-title = "M.Sc. Student in Robotics and Intelligent Systems"
+name = "Hai Huang"
+title = "M.S. Student in Robotics"
 institution = "Nanyang Technological University"
 avatar = "/profile.png"
 
 [social]
+email = "quixotehh@gmail.com"
 location = "Singapore"
 github = "https://github.com/QuixoteH"
 linkedin = "https://www.linkedin.com/in/quixoteh"

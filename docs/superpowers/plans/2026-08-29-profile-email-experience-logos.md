@@ -99,6 +99,7 @@ Expected: FAIL because the current profile/config values, GPA, Experience image 
 - Modify: `content/education.toml`
 - Modify: `content/experience.toml`
 - Modify: `src/components/home/Profile.tsx`
+- Modify: `src/components/pages/CardPage.tsx`
 
 **Interfaces:**
 - Consumes: `SiteConfig.social.email`, Lucide `Mail`, and `CardItem.image`.
@@ -170,6 +171,8 @@ image = "/logos/china-unicom.png"
 - [ ] **Step 3: Add the email icon to the existing social-link loop**
 
 Import `Mail` from `lucide-react`. Add the email item before GitHub and LinkedIn with `href: \`mailto:${social.email}\`` and `external: false`; mark GitHub and LinkedIn as `external: true`. Render `target` and `rel` only when `external` is true, leaving the existing icon button classes, `aria-label`, title, and screen-reader text unchanged.
+
+For embedded cards that contain only `title` and `image`, use compact mobile spacing, a `40px` logo container, and `text-xs`; prevent wrapping from `360px` upward and retain the existing sizes from the `sm` breakpoint upward. Below `360px`, allow natural wrapping instead of horizontal overflow. This preserves both Experience titles on one line at the verified `390px` viewport without changing Education cards.
 
 - [ ] **Step 4: Run the focused tests and confirm the green state**
 

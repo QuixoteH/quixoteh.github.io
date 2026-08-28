@@ -10,7 +10,9 @@ const readToml = (file) => parse(read(file));
 
 test('homepage config matches the approved GentleFress structure', () => {
   const config = readToml('content/config.toml');
-  assert.equal(config.author.title, 'M.Sc. Student in Robotics and Intelligent Systems');
+  assert.equal(config.author.name, 'Hai Huang');
+  assert.equal(config.author.title, 'M.S. Student in Robotics');
+  assert.equal(config.social.email, 'quixotehh@gmail.com');
   assert.deepEqual(
     config.navigation.map(({ title, href }) => ({ title, href })),
     [
@@ -27,7 +29,7 @@ test('homepage config matches the approved GentleFress structure', () => {
   assert.deepEqual(
     about.sections.map(({ id, type, source, title }) => ({ id, type, source, title })),
     [
-      { id: 'about', type: 'markdown', source: 'bio.md', title: 'About' },
+      { id: 'about', type: 'markdown', source: 'bio.md', title: 'Biography' },
       { id: 'education', type: 'card', source: 'education.toml', title: 'Education' },
       { id: 'experience', type: 'card', source: 'experience.toml', title: 'Experience' },
       { id: 'news', type: 'list', source: 'news.toml', title: 'News' },
@@ -49,18 +51,32 @@ test('education and experience contain only approved facts', () => {
       title: 'B.E. in Internet of Things',
       subtitle: 'Northeast Agricultural University',
       date: 'Sep. 2022 - Jun. 2026',
-      content: 'College of Intelligent Science and Engineering\n\nGPA: 85/100',
+      content: 'College of Intelligent Science and Engineering',
       image: '/logos/neau.png',
     },
   ]);
 
   const experience = readToml('content/experience.toml');
   assert.deepEqual(experience.items, [
-    { title: 'A*STAR Research Attachment' },
-    { title: 'China Unicom AI Solutions Engineer Intern' },
+    { title: 'A*STAR Research Attachment', image: '/logos/astar.png' },
+    {
+      title: 'China Unicom AI Solutions Engineer Intern',
+      image: '/logos/china-unicom.png',
+    },
   ]);
   for (const item of experience.items) {
-    assert.deepEqual(Object.keys(item), ['title']);
+    assert.deepEqual(Object.keys(item), ['title', 'image']);
+  }
+});
+
+test('profile email and Experience logo assets are wired', () => {
+  const profile = read('src/components/home/Profile.tsx');
+  assert.match(profile, /Github, Linkedin, Mail, MapPin/);
+  assert.match(profile, /name: 'Email'/);
+  assert.match(profile, /`mailto:\$\{social\.email\}`/);
+
+  for (const logo of ['public/logos/astar.png', 'public/logos/china-unicom.png']) {
+    assert.ok(fs.statSync(path.join(root, logo)).size > 0);
   }
 });
 
@@ -82,6 +98,8 @@ test('GentleFress visual structure and light-default theme are configured', () =
 
   assert.match(card, /item\.image/);
   assert.match(card, /h-12 w-12/);
+  assert.match(card, /isTitleOnly/);
+  assert.match(card, /text-xs min-\[360px\]:whitespace-nowrap sm:text-base/);
   assert.match(news, /max-h-80/);
   assert.match(news, /sm:max-h-96/);
   assert.match(news, /overflow-y-auto/);
@@ -102,4 +120,5 @@ test('CV changes only confirmed stale facts', () => {
   assert.match(cv, /Built an imitation-learning pipeline for simulated Franka Panda parcel sorting in ManiSkill3/);
   assert.doesNotMatch(cv, /Developing an imitation-learning solution/);
   assert.match(cv, /under review at IEEE TMM after major revision/);
+  assert.match(cv, /85\/100/);
 });

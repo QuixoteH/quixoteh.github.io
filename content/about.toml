@@ -12,7 +12,7 @@ research_interests = [
 id = "about"
 type = "markdown"
 source = "bio.md"
-title = "About"
+title = "Biography"
 
 [[sections]]
 id = "education"

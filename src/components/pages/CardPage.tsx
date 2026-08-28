@@ -49,29 +49,32 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
             </div>
 
             <div className={`grid ${embedded ? "gap-4" : "gap-6"}`}>
-                {config.items.map((item, index) => (
-                    <motion.div
-                        key={index}
-                        initial={false}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.4, delay: 0.1 * index }}
-                        className={`rounded-lg border border-neutral-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900 ${embedded ? "flex gap-4 px-3.5 py-3" : "p-6"}`}
-                    >
+                {config.items.map((item, index) => {
+                    const isTitleOnly = !item.subtitle && !item.date && !item.content && !item.tags;
+
+                    return (
+                        <motion.div
+                            key={index}
+                            initial={false}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4, delay: 0.1 * index }}
+                            className={`rounded-lg border border-neutral-200 bg-white shadow-sm transition-shadow duration-200 hover:shadow-md dark:border-neutral-800 dark:bg-neutral-900 ${embedded ? (isTitleOnly ? "flex items-center gap-2 px-3 py-3 sm:gap-4 sm:px-3.5" : "flex gap-4 px-3.5 py-3") : "p-6"}`}
+                        >
                         {item.image && (
-                            <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-neutral-50 dark:bg-neutral-800/50">
+                            <div className={`flex flex-shrink-0 items-center justify-center overflow-hidden rounded-lg bg-neutral-50 dark:bg-neutral-800/50 ${isTitleOnly ? "h-10 w-10 sm:h-12 sm:w-12" : "h-12 w-12"}`}>
                                 <Image
                                     src={item.image}
                                     alt=""
                                     width={32}
                                     height={32}
-                                    className="h-8 w-8 object-contain"
+                                    className={`${isTitleOnly ? "h-7 w-7 sm:h-8 sm:w-8" : "h-8 w-8"} object-contain`}
                                     aria-hidden="true"
                                 />
                             </div>
                         )}
                         <div className="min-w-0 flex-1">
-                            <div className="mb-2 flex min-w-0 flex-col items-start gap-2 sm:flex-row sm:justify-between">
-                                <h3 className={`${embedded ? "text-base" : "text-xl"} min-w-0 break-words font-semibold leading-snug text-primary`}>{item.title}</h3>
+                            <div className={`${isTitleOnly ? "mb-0" : "mb-2"} flex min-w-0 flex-col items-start gap-2 sm:flex-row sm:justify-between`}>
+                                <h3 className={`${embedded ? (isTitleOnly ? "text-xs min-[360px]:whitespace-nowrap sm:text-base" : "text-base") : "text-xl"} min-w-0 ${isTitleOnly ? "" : "break-words"} font-semibold leading-snug text-primary`}>{item.title}</h3>
                                 {item.date && (
                                     <span className={`${embedded ? "text-xs" : "text-sm"} w-fit flex-shrink-0 whitespace-nowrap rounded bg-neutral-100 px-2 py-1 font-medium text-neutral-500 dark:bg-neutral-800`}>
                                         {item.date}
@@ -98,8 +101,9 @@ export default function CardPage({ config, embedded = false }: { config: CardPag
                                 </div>
                             )}
                         </div>
-                    </motion.div>
-                ))}
+                        </motion.div>
+                    );
+                })}
             </div>
         </motion.div>
     );

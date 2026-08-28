@@ -8,13 +8,14 @@
   ],
   "required": {
     "index.html": [
-      "Hai HUANG",
-      "M.Sc. Student in Robotics and Intelligent Systems",
+      "Hai Huang",
+      "M.S. Student in Robotics",
       "Singapore",
       "Nanyang Technological University",
       "GitHub",
       "LinkedIn",
       "About",
+      "Biography",
       "Hai Huang (Student Member, IEEE) received the B.Eng. degree in Internet of Things Engineering from Northeast Agricultural University, Harbin, China, in 2026. He is currently pursuing the M.Sc. degree in Robotics and Intelligent Systems at Nanyang Technological University, Singapore. He is conducting dissertation research with the Singapore Institute of Manufacturing Technology (SIMTech), Agency for Science, Technology and Research (A*STAR). Previously, he was an AI Solutions Engineer Intern at the Digital Technology Center, China United Network Communications Group Co., Ltd. His research interests focus on robot learning and manipulation.",
       "Interests",
       "Force-aware Robot Learning",
@@ -28,7 +29,6 @@
       "Northeast Agricultural University",
       "Sep. 2022 - Jun. 2026",
       "College of Intelligent Science and Engineering",
-      "GPA: 85/100",
       "Experience",
       "A*STAR Research Attachment",
       "China Unicom AI Solutions Engineer Intern",
@@ -186,9 +186,12 @@
     "index.html": [
       "href=\"https://github.com/QuixoteH\"",
       "href=\"https://www.linkedin.com/in/quixoteh\"",
+      "href=\"mailto:quixotehh@gmail.com\"",
       "src=\"/profile.png\"",
       "src=\"/logos/ntu.svg\"",
-      "src=\"/logos/neau.png\""
+      "src=\"/logos/neau.png\"",
+      "src=\"/logos/astar.png\"",
+      "src=\"/logos/china-unicom.png\""
     ],
     "publications/index.html": [
       "href=\"https://arxiv.org/abs/2510.10679\""
@@ -201,7 +204,8 @@
   },
   "forbiddenByRoute": {
     "index.html": [
-      "Selected Publications"
+      "Selected Publications",
+      "GPA: 85/100"
     ],
     "cv-json/index.html": [
       "Incoming M.Sc. Student in Robotics and Intelligent Systems",
