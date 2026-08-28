@@ -1,0 +1,56 @@
+[site]
+title = "Hai HUANG"
+description = "Robotics and intelligent systems researcher"
+favicon = "/favicon.svg"
+last_updated = "August 29, 2026"
+
+[author]
+name = "Hai HUANG"
+title = ""
+institution = "Nanyang Technological University"
+avatar = "/profile.png"
+
+[social]
+location = "Singapore"
+github = "https://github.com/QuixoteH"
+linkedin = "https://www.linkedin.com/in/quixoteh"
+
+[features]
+enable_likes = false
+enable_one_page_mode = false
+
+[i18n]
+enabled = false
+locales = ["en"]
+default_locale = "en"
+mode = "fixed"
+fixed_locale = "en"
+persist = false
+switcher = false
+
+[i18n.labels]
+en = "English"
+
+[[navigation]]
+title = "Research"
+type = "page"
+target = "portfolio"
+href = "/portfolio/"
+
+[[navigation]]
+title = "Publications"
+type = "page"
+target = "publications"
+href = "/publications/"
+
+[[navigation]]
+title = "Awards"
+type = "page"
+target = "teaching"
+href = "/teaching/"
+
+[[navigation]]
+title = "CV"
+type = "page"
+target = "cv-json"
+href = "/cv-json/"
