@@ -52,14 +52,14 @@ test('education and experience contain only approved facts', () => {
     {
       title: 'M.S. in Robotics and Intelligent Systems',
       subtitle: 'Nanyang Technological University',
-      date: 'Aug. 2026 - Jan. 2028 (Expected)',
+      date: '08/2026 – 01/2028 (Expected)',
       content: 'School of Mechanical and Aerospace Engineering',
       image: '/logos/ntu.svg',
     },
     {
       title: 'B.E. in Internet of Things',
       subtitle: 'Northeast Agricultural University',
-      date: 'Sep. 2022 - Jun. 2026',
+      date: '09/2022 – 06/2026',
       content: 'College of Intelligent Science and Engineering',
       image: '/logos/neau.png',
     },
@@ -141,24 +141,42 @@ test('GentleFress visual structure and light-default theme are configured', () =
 
 test('CV changes only confirmed stale facts', () => {
   const cv = read('content/cv-json.md');
+  const textPage = read('src/components/pages/TextPage.tsx');
   assert.match(cv, /^## Hai Huang$/m);
   assert.doesNotMatch(cv, /Hai HUANG/);
   assert.match(cv, /\*\*M\.Sc\. Student in Robotics and Intelligent Systems\*\*/);
   assert.doesNotMatch(cv, /Incoming M\.Sc\. Student/);
+  assert.doesNotMatch(cv, /^## Summary$/m);
   assert.match(cv, /### M\.S\. in Robotics and Intelligent Systems/);
   assert.match(cv, /### B\.E\. in Internet of Things/);
-  assert.match(cv, /SO-101 Real-World Robotic Learning with LeRobot[\s\S]*?\*\*Robotics Project\*\* · 2026-07-01/);
+  assert.match(cv, /SO-101 Real-World Robotic Learning with LeRobot[\s\S]*?\*\*Robotics Project\*\* · 07\/2026/);
   assert.match(cv, /Built an imitation-learning pipeline for simulated Franka Panda parcel sorting in ManiSkill3/);
   assert.doesNotMatch(cv, /Developing an imitation-learning solution/);
   assert.match(cv, /under review at IEEE TMM after major revision/);
+  assert.doesNotMatch(cv, /### MuJoCo Playground|portfolio\/2026-mujoco-playground/);
+  assert.doesNotMatch(cv, /(?:Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec)[a-z]*\.? \d{4}|\d{4}-\d{2}-\d{2}/);
+  assert.match(textPage, /h3: \(\{ children \}\) => <h3 className="text-xl font-serif font-semibold/);
   assert.match(cv, /85\/100/);
+});
+
+test('News dates use the site-wide numeric month format', () => {
+  const news = readToml('content/news.toml');
+  assert.deepEqual(news.news.map(({ date }) => date), [
+    '[08/2026]',
+    '[08/2026]',
+    '[07/2026]',
+    '[07/2026]',
+    '[06/2026]',
+    '[09/2025]',
+    '[04/2024]',
+  ]);
 });
 
 test('public project status stays consistent with confirmed updates', () => {
   const portfolio = readToml('content/portfolio.toml');
   const so101 = portfolio.items.find(({ title }) => title === 'SO-101 Real-World Robotic Learning with LeRobot');
   const marso = portfolio.items.find(({ title }) => title.startsWith('Marso Hack Berlin 2026'));
-  assert.equal(so101?.date, 'July 01, 2026');
+  assert.equal(so101?.date, '07/2026');
   assert.match(marso?.content ?? '', /Completed an imitation-learning solution/);
   assert.doesNotMatch(marso?.content ?? '', /Developing an imitation-learning solution/);
   assert.match(marso?.content ?? '', /Parsed and replayed expert demonstration trajectories/);
@@ -169,6 +187,17 @@ test('public project status stays consistent with confirmed updates', () => {
   const publication = read('content/publications.bib');
   assert.match(publication, /Accepted for publication as a regular paper in IEEE Transactions on Multimedia\./);
   assert.doesNotMatch(publication, /Under review at IEEE Transactions on Multimedia after major revision\./);
+});
+
+test('removed projects and card dates are not left behind', () => {
+  const portfolio = readToml('content/portfolio.toml');
+  assert.equal(portfolio.items.length, 4);
+  assert.deepEqual(portfolio.items.map(({ date }) => date), ['07/2026', '07/2026', '01/2026', '03/2025']);
+  assert.doesNotMatch(read('content/portfolio.toml'), /MuJoCo Playground/);
+  assert.doesNotMatch(read('scripts/create-redirects.mjs'), /mujoco/);
+
+  const teaching = readToml('content/teaching.toml');
+  assert.equal(teaching.items[0].date, '05/2024');
 });
 
 test('Awards keeps the result inside the card without a duplicate section summary', () => {

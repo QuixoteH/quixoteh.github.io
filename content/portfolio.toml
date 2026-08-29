@@ -4,7 +4,7 @@ title = "Research"
 [[items]]
 title = "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge"
 subtitle = "Imitation learning for simulated parcel sorting with ManiSkill3, SAPIEN, and a Franka Panda manipulator."
-date = "July 01, 2026"
+date = "07/2026"
 content = """
 - Completed an imitation-learning solution for a simulated robot parcel-sorting challenge using ManiSkill3, SAPIEN, and a Franka Panda manipulator.
 - Parsed and replayed expert demonstration trajectories stored in HDF5/JSON formats across easy, medium, and hard task settings, extracting observations, actions, environment states, and success labels for training and evaluation.
@@ -13,19 +13,9 @@ content = """
 """
 
 [[items]]
-title = "MuJoCo Playground – Vision-Based RL for Panda Arm Grasping"
-subtitle = "GPU-parallelized reinforcement learning for vision-based Panda arm pick-and-place."
-date = "June 01, 2026"
-content = """
-- Reproduced Google DeepMind's MuJoCo Playground vision-based grasping task, training a GPU-parallelized PPO policy for a Franka Panda arm to pick and place objects from pixel observations.
-- Configured the JAX/Brax training pipeline with Madrona-MJX rendering, scaling to thousands of parallel environments on a single GPU to reduce wall-clock training time from hours to minutes.
-- Tuned reward shaping (reach, grasp, lift, and place terms) and domain randomization (object pose, lighting, and camera viewpoint) to improve policy robustness and sim-to-real transfer readiness.
-"""
-
-[[items]]
 title = "SO-101 Real-World Robotic Learning with LeRobot"
 subtitle = "End-to-end imitation learning on the Huaner SO-101 dual-arm platform using LeRobot."
-date = "July 01, 2026"
+date = "07/2026"
 content = """
 - Reproduced an end-to-end imitation-learning pipeline on the Huaner SO-101 dual-arm platform using the LeRobot framework, covering teleoperation data collection, SmolVLA policy training, and real-world deployment.
 - Configured the full software stack and performed source-level modifications to enable RGB multi-view perception and language-conditioned manipulation.
@@ -35,7 +25,7 @@ content = """
 [[items]]
 title = "YOLOv8 and IoT Agricultural Pest Detection System"
 subtitle = "Undergraduate thesis combining embedded sensing, live video, and YOLOv8 pest detection."
-date = "January 01, 2026"
+date = "01/2026"
 content = """
 - Designed the embedded control architecture on an STM32F103C8T6 microcontroller, integrating DHT22 temperature and humidity sensing with an effective accumulated-temperature algorithm for automated SMS pest-outbreak alerts.
 - Configured an ESP32-S3-WROOM-1U WiFi module to stream live field video from the microcontroller node to a host-computer gateway for real-time processing.
@@ -46,7 +36,7 @@ content = """
 [[items]]
 title = "MSM-Seg: Multi-Modal Brain Tumor Segmentation"
 subtitle = "Comparative 3D segmentation experiments on BraTS 2024 and BraTS 2025 for the MSM-Seg framework."
-date = "March 01, 2025"
+date = "03/2025"
 content = """
 - Conducted comprehensive comparative experiments by training and evaluating 3D segmentation models (nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and others) on BraTS 2024 and BraTS 2025 datasets.
 - Implemented standardized evaluation protocols in the BraTS-METS benchmark, measuring Dice and HD95 for ET, TC, and WT sub-regions.

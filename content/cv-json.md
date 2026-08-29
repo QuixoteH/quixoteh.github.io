@@ -8,20 +8,16 @@ Singapore, SG\
 GitHub: [QuixoteH](https://github.com/QuixoteH)\
 LinkedIn: [quixoteh](https://www.linkedin.com/in/quixoteh)
 
-## Summary
-
-Robot manipulation researcher focusing on reinforcement learning and vision-language-action models.
-
 ## Education
 
 ### M.S. in Robotics and Intelligent Systems
 
-**Master of Science** · Aug. 2026 - Present\
+**Master of Science** · 08/2026 – Present\
 Nanyang Technological University, School of Mechanical and Aerospace Engineering
 
 ### B.E. in Internet of Things
 
-**Bachelor of Engineering** · Sep. 2022 - Jun. 2026\
+**Bachelor of Engineering** · 09/2022 – 06/2026\
 Northeast Agricultural University, College of Intelligent Science and Engineering\
 GPA: 85/100\
 Courses: Data Structures and Algorithms, Microcontroller Development, Principles of Sensor Networks
@@ -30,7 +26,7 @@ Courses: Data Structures and Algorithms, Microcontroller Development, Principles
 
 ### AI Solutions Engineer Intern
 
-**China Unicom Chengdu Branch, Digital Technology Center** · Jul. 2025 - Sep. 2025
+**China Unicom Chengdu Branch, Digital Technology Center** · 07/2025 – 09/2025
 
 Supported AI solution planning and technical delivery for government and enterprise projects.
 
@@ -64,7 +60,7 @@ Supported AI solution planning and technical delivery for government and enterpr
 
 ### MSM-Seg: A Modality-and-Slice Memory Framework with Category-Agnostic Prompting for Multi-Modal Brain Tumor Segmentation
 
-**2025-10-14**\
+**10/2025**\
 arXiv:2510.10679; under review at IEEE TMM after major revision\
 Yuxiang Luo, Qing Xu, Hai Huang, et al.\
 [View Publication](https://arxiv.org/abs/2510.10679)
@@ -73,23 +69,15 @@ Yuxiang Luo, Qing Xu, Hai Huang, et al.\
 
 ### SO-101 Real-World Robotic Learning with LeRobot
 
-**Robotics Project** · 2026-07-01
+**Robotics Project** · 07/2026
 
 Reproduced an end-to-end LeRobot imitation-learning pipeline on the Huaner SO-101 dual-arm platform, covering teleoperation data collection, SmolVLA training, and real-world deployment. Configured RGB multi-view perception and language-conditioned manipulation, and resolved hardware, calibration, and inference failures.
 
 [View Project](/portfolio/2026-so101/)
 
-### MuJoCo Playground – Vision-Based RL for Panda Arm Grasping
-
-**Reinforcement Learning Project** · 2026-06-01
-
-Reproduced a vision-based Panda grasping task with GPU-parallelized PPO, JAX/Brax, and Madrona-MJX. Tuned reach, grasp, lift, and place rewards plus domain randomization for object pose, lighting, and camera viewpoint.
-
-[View Project](/portfolio/2026-mujoco-playground/)
-
 ### Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge
 
-**Robotics Competition Project** · 2026-07-01
+**Robotics Competition Project** · 07/2026
 
 Built an imitation-learning pipeline for simulated Franka Panda parcel sorting in ManiSkill3, covering color-labeled parcel placement across three difficulty settings, State Diffusion Policy baselines, Easy RGB ACT offline training, and fixed 50-episode evaluation.
 
@@ -97,7 +85,7 @@ Built an imitation-learning pipeline for simulated Franka Panda parcel sorting i
 
 ### MSM-Seg: Multi-Modal Brain Tumor Segmentation
 
-**Research Experience** · 2025-03-01
+**Research Experience** · 03/2025
 
 Trained and evaluated 3D segmentation baselines on BraTS 2024 and BraTS 2025, implemented BraTS-METS Dice and HD95 protocols for ET, TC, and WT, and analyzed results under category-agnostic prompting.
 
@@ -105,7 +93,7 @@ Trained and evaluated 3D segmentation baselines on BraTS 2024 and BraTS 2025, im
 
 ### YOLOv8 and IoT Agricultural Pest Detection System
 
-**Undergraduate Thesis** · 2026-01-01
+**Undergraduate Thesis** · 01/2026
 
 Built an STM32 and DHT22 monitoring node with accumulated-temperature SMS alerts, ESP32-S3 live video streaming, OpenCV ingestion, YOLOv8x detection on IP102, and a PyQt5 and SQLite interface.
 
