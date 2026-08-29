@@ -131,6 +131,8 @@ test('GentleFress visual structure and light-default theme are configured', () =
   assert.match(news, /sm:max-h-96/);
   assert.match(news, /overflow-y-auto/);
   assert.match(news, /ReactMarkdown/);
+  assert.match(news, /mb-4 font-serif text-2xl font-bold text-primary/);
+  assert.doesNotMatch(news, /text-3xl|text-4xl/);
   assert.match(store, /theme: 'light'/);
   assert.match(layout, /parsed\?\.state\?\.theme \|\| 'light'/);
   assert.match(css, /--accent: #7D6B8C;/);

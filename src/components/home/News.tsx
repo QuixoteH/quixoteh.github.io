@@ -24,7 +24,7 @@ export default function News({ items, title }: NewsProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.5 }}
         >
-            <h2 className="mb-4 font-serif text-3xl font-bold text-primary sm:text-4xl">{resolvedTitle}</h2>
+            <h2 className="mb-4 font-serif text-2xl font-bold text-primary">{resolvedTitle}</h2>
             <div className="max-h-80 overflow-y-auto overscroll-y-contain scroll-smooth rounded-lg border border-neutral-200/90 bg-neutral-50/60 px-4 py-3 pr-2 sm:max-h-96 dark:border-neutral-700/80 dark:bg-neutral-900/30">
               <ul className="space-y-4 pr-1">
                 {items.map((item, index) => (
