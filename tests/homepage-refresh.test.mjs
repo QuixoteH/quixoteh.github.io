@@ -52,7 +52,7 @@ test('education and experience contain only approved facts', () => {
     {
       title: 'M.S. in Robotics and Intelligent Systems',
       subtitle: 'Nanyang Technological University',
-      date: '08/2026 – 01/2028 (Expected)',
+      date: '08/2026 – Present',
       content: 'School of Mechanical and Aerospace Engineering',
       image: '/logos/ntu.svg',
     },
