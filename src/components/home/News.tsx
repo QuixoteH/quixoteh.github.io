@@ -33,7 +33,7 @@ export default function News({ items, title }: NewsProps) {
                         className="flex flex-col gap-1 border-b border-neutral-200/60 pb-4 last:border-b-0 last:pb-0 sm:flex-row sm:items-start sm:gap-4 dark:border-neutral-700/50"
                     >
                         <span className="text-sm font-medium tabular-nums text-neutral-500 sm:w-24 sm:flex-shrink-0 sm:text-base">{item.date}</span>
-                        <div className="min-w-0 text-base leading-relaxed text-neutral-800 sm:text-lg dark:text-neutral-200">
+                        <div className="min-w-0 text-base font-normal leading-relaxed text-neutral-700 dark:text-neutral-600">
                             <ReactMarkdown
                                 components={{
                                     p: ({ children }) => <span className="inline">{children}</span>,
