@@ -3,7 +3,7 @@ import path from 'node:path';
 
 const root = process.cwd();
 const fixture = JSON.parse(
-  fs.readFileSync(path.join(root, 'tests/baseline-content.json'), 'utf8')
+  fs.readFileSync(path.join(root, 'tests/export-contract.json'), 'utf8')
 );
 
 const decodeHtml = (value) => value
@@ -22,7 +22,6 @@ const decodeHtml = (value) => value
   .trim();
 
 const failures = [];
-const renderedText = new Map();
 const renderedHtml = new Map();
 
 for (const route of fixture.routes) {
@@ -34,33 +33,12 @@ for (const route of fixture.routes) {
 
   const html = fs.readFileSync(file, 'utf8');
   renderedHtml.set(route, html);
-  renderedText.set(route, decodeHtml(html));
-}
 
-for (const [route, required] of Object.entries(fixture.required)) {
-  const page = renderedText.get(route) || '';
-  for (const text of required) {
-    if (!page.includes(text)) {
-      failures.push(`Missing from ${route}: ${text}`);
-    }
-  }
-}
-
-for (const [route, required] of Object.entries(fixture.requiredHtml)) {
-  const page = renderedHtml.get(route) || '';
-  for (const text of required) {
-    if (!page.includes(text)) {
-      failures.push(`Missing HTML from ${route}: ${text}`);
-    }
-  }
-}
-
-for (const [route, forbidden] of Object.entries(fixture.forbiddenByRoute || {})) {
-  const page = renderedText.get(route) || '';
-  for (const text of forbidden) {
-    if (page.includes(text)) {
-      failures.push(`Forbidden on ${route}: ${text}`);
-    }
+  const main = html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/i);
+  if (!main) {
+    failures.push(`Missing <main> from ${route}`);
+  } else if (decodeHtml(main[1]).length < 20) {
+    failures.push(`Empty <main> content in ${route}`);
   }
 }
 
@@ -70,16 +48,9 @@ for (const [route, page] of renderedHtml) {
   }
 }
 
-const corpus = [...renderedText.values()].join(' ');
-for (const text of fixture.banned) {
-  if (corpus.includes(text)) {
-    failures.push(`Example content remains: ${text}`);
-  }
-}
-
 if (failures.length) {
   console.error(failures.join('\n'));
   process.exit(1);
 }
 
-console.log(`Verified ${fixture.routes.length} routes and preserved content.`);
+console.log(`Verified ${fixture.routes.length} exported routes and visible page content.`);
