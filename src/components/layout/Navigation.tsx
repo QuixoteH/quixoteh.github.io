@@ -1,7 +1,8 @@
 'use client';
 
+/* eslint-disable @next/next/no-html-link-for-pages -- Full page loads avoid stale chunks after static Pages deployments. */
+
 import { useState, useEffect, useMemo, useRef, useCallback } from 'react';
-import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Disclosure } from '@headlessui/react';
@@ -179,12 +180,12 @@ export default function Navigation({
                   whileTap={{ scale: 0.95 }}
                   className="flex-shrink-0"
                 >
-                  <Link
+                  <a
                     href="/"
                     className="text-xl lg:text-2xl font-serif font-semibold text-primary hover:text-accent transition-colors duration-200"
                   >
                     {effectiveSiteTitle}
-                  </Link>
+                  </a>
                 </motion.div>
 
                 <div className="hidden lg:block">
@@ -221,11 +222,10 @@ export default function Navigation({
                         const href = getDesktopItemHref(item);
 
                         return (
-                          <Link
+                          <a
                             key={item.target}
                             href={href}
                             data-nav-href={href}
-                            prefetch={true}
                             onClick={() => enableOnePageMode && setActiveHash(`#${item.target}`)}
                             onMouseEnter={() => setHoveredHref(href)}
                             className={cn(
@@ -238,7 +238,7 @@ export default function Navigation({
                             )}
                           >
                             {item.title}
-                          </Link>
+                          </a>
                         );
                       })}
                     </div>
@@ -298,9 +298,8 @@ export default function Navigation({
                           transition={{ delay: index * 0.1 }}
                         >
                           <Disclosure.Button
-                            as={Link}
+                            as="a"
                             href={href}
-                            prefetch={true}
                             onClick={() => enableOnePageMode && setActiveHash(item.href === '/' ? '' : `#${item.target}`)}
                             className={cn(
                               'block px-3 py-2 rounded-md text-base font-medium transition-all duration-200',

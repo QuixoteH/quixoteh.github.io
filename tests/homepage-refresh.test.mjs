@@ -142,3 +142,12 @@ test('export verification checks structure instead of frozen content', () => {
   assert.match(verifier, /opacity:0/);
   assert.doesNotMatch(verifier, /fixture\.(required|requiredHtml|forbiddenByRoute|banned)/);
 });
+
+test('cross-page navigation does not depend on stale Next.js chunks after deployment', () => {
+  const navigation = read('src/components/layout/Navigation.tsx');
+
+  assert.doesNotMatch(navigation, /from 'next\/link'/);
+  assert.doesNotMatch(navigation, /prefetch=\{true\}/);
+  assert.match(navigation, /<a\s+href="\/"/);
+  assert.match(navigation, /<Disclosure\.Button\s+as="a"/);
+});
