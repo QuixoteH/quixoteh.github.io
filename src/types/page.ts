@@ -1,5 +1,5 @@
 export interface BasePageConfig {
-    type: 'about' | 'publication' | 'card' | 'text';
+    type: 'about' | 'publication' | 'card' | 'competition' | 'text';
     title: string;
     description?: string;
 }
@@ -27,4 +27,27 @@ export interface CardItem {
 export interface CardPageConfig extends BasePageConfig {
     type: 'card';
     items: CardItem[];
+}
+
+export interface CompetitionLink {
+    label: string;
+    url: string;
+    kind?: 'code' | 'competition' | 'paper' | 'video';
+}
+
+export interface CompetitionItem {
+    title: string;
+    badge?: string;
+    role?: string;
+    organization: string;
+    date: string;
+    content: string;
+    images?: string[];
+    visuals?: string[];
+    links?: CompetitionLink[];
+}
+
+export interface CompetitionPageConfig extends BasePageConfig {
+    type: 'competition';
+    items: CompetitionItem[];
 }

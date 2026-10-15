@@ -2,7 +2,7 @@
 title = "Hai Huang"
 description = "Robotics and intelligent systems researcher"
 favicon = "/favicon-book.svg"
-last_updated = "August 29, 2026"
+last_updated = "October 16, 2026"
 
 [author]
 name = "Hai Huang"
@@ -43,6 +43,12 @@ title = "Research"
 type = "page"
 target = "portfolio"
 href = "/portfolio/"
+
+[[navigation]]
+title = "Competitions"
+type = "page"
+target = "competitions"
+href = "/competitions/"
 
 [[navigation]]
 title = "Publications"

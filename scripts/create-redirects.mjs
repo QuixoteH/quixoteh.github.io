@@ -5,7 +5,7 @@ const redirects = {
   'about/index.html': '/',
   'about.html': '/',
   'portfolio/2025-msm-seg/index.html': '/portfolio/',
-  'portfolio/2026-marso/index.html': '/portfolio/',
+  'portfolio/2026-marso/index.html': '/competitions/',
   'portfolio/2026-pest-detection/index.html': '/portfolio/',
   'portfolio/2026-so101/index.html': '/portfolio/',
   'publication/2025-msm-seg/index.html': '/publications/',

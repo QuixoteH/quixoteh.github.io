@@ -58,12 +58,12 @@ Supported AI solution planning and technical delivery for government and enterpr
 
 ## Publications
 
-### MSM-Seg: A Modality-and-Slice Memory Framework with Category-Agnostic Prompting for Multi-Modal Brain Tumor Segmentation
+### Synergistic Modality-and-Slice Memory Framework for Cross-Modal 3D Brain Tumor Segmentation
 
-**10/2025**\
-arXiv:2510.10679; under review at IEEE TMM after major revision\
-Yuxiang Luo, Qing Xu, Hai Huang, et al.\
-[View Publication](https://arxiv.org/abs/2510.10679)
+**IEEE Transactions on Multimedia** · 10/2026\
+Published, pp. 1–12. DOI: 10.1109/TMM.2026.3739470\
+Yuxiang Luo, Qing Xu, **Hai Huang**, Yuqi Ouyang, Xiangjian He, Zhen Chen, Wenting Duan, Jiebo Luo\
+[IEEE Xplore](https://ieeexplore.ieee.org/document/11718973) · [DOI](https://doi.org/10.1109/TMM.2026.3739470) · [Code](https://github.com/QuixoteH/MSM-Seg)
 
 ## Portfolio
 
@@ -81,15 +81,15 @@ Reproduced an end-to-end LeRobot imitation-learning pipeline on the Huaner SO-10
 
 Built an imitation-learning pipeline for simulated Franka Panda parcel sorting in ManiSkill3, covering color-labeled parcel placement across three difficulty settings, State Diffusion Policy baselines, Easy RGB ACT offline training, and fixed 50-episode evaluation.
 
-[View Project](/portfolio/2026-marso/)
+[View Competition Project](/competitions/)
 
-### MSM-Seg: Multi-Modal Brain Tumor Segmentation
+### MSM-Seg: Cross-Modal 3D Brain Tumor Segmentation
 
 **Research Experience** · 03/2025
 
-Trained and evaluated 3D segmentation baselines on BraTS 2024 and BraTS 2025, implemented BraTS-METS Dice and HD95 protocols for ET, TC, and WT, and analyzed results under category-agnostic prompting.
+Trained and evaluated 3D segmentation baselines on BraTS 2024 and BraTS 2025, implemented BraTS-METS Dice and HD95 protocols for ET, TC, and WT, and analyzed results supporting the paper published in IEEE Transactions on Multimedia.
 
-[View Project](/portfolio/2025-msm-seg/)
+[IEEE Xplore](https://ieeexplore.ieee.org/document/11718973) · [View Project](/portfolio/2025-msm-seg/)
 
 ### YOLOv8 and IoT Agricultural Pest Detection System
 

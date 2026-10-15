@@ -2,6 +2,7 @@
   "routes": [
     "index.html",
     "portfolio/index.html",
+    "competitions/index.html",
     "publications/index.html",
     "teaching/index.html",
     "cv-json/index.html"

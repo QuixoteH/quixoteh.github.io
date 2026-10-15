@@ -2,17 +2,6 @@ type = "card"
 title = "Research"
 
 [[items]]
-title = "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge"
-subtitle = "Imitation learning for simulated parcel sorting with ManiSkill3, SAPIEN, and a Franka Panda manipulator."
-date = "07/2026"
-content = """
-- Completed an imitation-learning solution for a simulated robot parcel-sorting challenge using ManiSkill3, SAPIEN, and a Franka Panda manipulator.
-- Parsed and replayed expert demonstration trajectories stored in HDF5/JSON formats across easy, medium, and hard task settings, extracting observations, actions, environment states, and success labels for training and evaluation.
-- Established behavior-cloning baselines from state and RGB observations and evaluated State Diffusion Policy and RGB ACT policies in local rollout episodes.
-- Built the training and rollout pipeline and measured local policy performance by task success rate.
-"""
-
-[[items]]
 title = "SO-101 Real-World Robotic Learning with LeRobot"
 subtitle = "End-to-end imitation learning on the Huaner SO-101 dual-arm platform using LeRobot."
 date = "07/2026"
@@ -34,11 +23,12 @@ content = """
 """
 
 [[items]]
-title = "MSM-Seg: Multi-Modal Brain Tumor Segmentation"
-subtitle = "Comparative 3D segmentation experiments on BraTS 2024 and BraTS 2025 for the MSM-Seg framework."
+title = "MSM-Seg: Cross-Modal 3D Brain Tumor Segmentation"
+subtitle = "Comparative 3D segmentation experiments supporting the published MSM-Seg framework."
 date = "03/2025"
 content = """
 - Conducted comprehensive comparative experiments by training and evaluating 3D segmentation models (nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and others) on BraTS 2024 and BraTS 2025 datasets.
 - Implemented standardized evaluation protocols in the BraTS-METS benchmark, measuring Dice and HD95 for ET, TC, and WT sub-regions.
 - Analyzed quantitative results to validate that MSM-Seg outperforms or matches all baselines, particularly under the category-agnostic prompting setting.
+- Paper: [IEEE Transactions on Multimedia](https://ieeexplore.ieee.org/document/11718973).
 """

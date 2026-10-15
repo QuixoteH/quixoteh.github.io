@@ -54,6 +54,25 @@ test('editable content files are structurally valid', () => {
     }
   }
 
+  const competitions = readToml('content/competitions.toml');
+  assert.equal(competitions.type, 'competition');
+  assert.ok(isNonEmptyString(competitions.title));
+  assert.ok(Array.isArray(competitions.items));
+  for (const item of competitions.items) {
+    for (const field of ['title', 'organization', 'date', 'content']) {
+      assert.ok(isNonEmptyString(item[field]));
+    }
+    for (const image of item.images || []) {
+      assert.ok(image.startsWith('/'));
+      assert.ok(fs.existsSync(path.join(root, 'public', image.slice(1))));
+    }
+    assert.ok((item.visuals || []).every(isNonEmptyString));
+    for (const link of item.links || []) {
+      assert.ok(isNonEmptyString(link.label));
+      assert.ok(/^https:\/\//.test(link.url));
+    }
+  }
+
   const news = readToml('content/news.toml');
   assert.ok(Array.isArray(news.news));
   for (const item of news.news) {
@@ -76,8 +95,16 @@ test('profile assets and homepage renderers stay wired', () => {
   const client = read('src/components/home/HomePageClient.tsx');
   assert.match(page, /type: 'markdown' \| 'publications' \| 'list' \| 'card'/);
   assert.match(page, /case 'card'/);
+  assert.match(page, /pageConfig\.type === 'competition'/);
   assert.match(client, /case 'card'/);
+  assert.match(client, /page\.type === 'competition'/);
   assert.doesNotMatch(client, /SelectedPublications/);
+
+  const competitionPage = read('src/components/pages/CompetitionPage.tsx');
+  assert.match(competitionPage, /item\.images/);
+  assert.match(competitionPage, /item\.badge/);
+  assert.match(competitionPage, /item\.links/);
+  assert.match(competitionPage, /text-accent/);
 
   const favicon = read('public/favicon-book.svg');
   assert.match(favicon, /<title>Open book<\/title>/);
