@@ -24,7 +24,7 @@ Courses: Data Structures and Algorithms, Microcontroller Development, Principles
 
 ## Work Experience
 
-### AI Solutions Engineer Intern
+### Solutions Engineer Intern
 
 **China Unicom Chengdu Branch, Digital Technology Center** · 07/2025 – 09/2025
 
