@@ -24,8 +24,8 @@ kind = "competition"
 
 [[items]]
 title = "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge"
-badge = "Not Submitted · Reproduction Study"
-role = "Post-deadline reproduction and experiments (no official submission)"
+badge = "Reproduction Study"
+role = "Imitation-learning reproduction and experiments for simulated parcel sorting"
 organization = "Marso Robotics"
 date = "07/2026"
 images = [
@@ -33,7 +33,7 @@ images = [
   "/competitions/marso-dp-results.png"
 ]
 content = """
-- **Background:** Marso Hack Berlin 2026 asked for color-matched parcel sorting with a Franka Panda robot in ManiSkill3 and SAPIEN. The deadline had passed, so no official submission was made.
+- **Background:** Marso Hack Berlin 2026 asked for color-matched parcel sorting with a Franka Panda robot in ManiSkill3 and SAPIEN.
 - **Task:** Reproduce imitation-learning baselines for the challenge to study how they behave across the Easy, Medium, and Hard settings.
 - **Action:** Built State Diffusion Policy and RGB ACT training and evaluation pipelines, evaluated State Diffusion Policy over fixed 50-episode runs per setting, and trained the Easy RGB ACT policy for 30,000 offline updates.
 - **Result:** Local sort accuracies for State Diffusion Policy were **0.390** (Easy), **0.090** (Medium), and **0.103** (Hard). Checkpoint loading and submission packaging were verified.
