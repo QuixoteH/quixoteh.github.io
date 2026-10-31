@@ -10,7 +10,9 @@ organization = "RoboSynChallenge Organizing Committee"
 date = "10/2026"
 visuals = ["23rd", "Preliminary Stage"]
 content = """
-- Team LBWSquare ranked **23rd** in the preliminary stage of the RoboSynChallenge embodied-AI competition.
+- **Models and usage:** Selected per task among the official released **ACT**, **Diffusion Policy**, and **SmolVLA** checkpoints behind one unified adapter, trained a **pi0.5** policy for the handle-basket task, fine-tuned released checkpoints with extra perturbed simulation data, and tuned inference settings such as the replanning interval (water pouring success rose from 50% to 85%).
+- **Challenges with small models:** The released small policies were brittle under scene perturbations, with click-bell, pipette, and drawer tasks dropping sharply, while handover and sample loading stayed near zero. Fine-tuning often brought no gain (drawer SmolVLA unchanged, item assembly worse), and temporal ensembling hurt. With only held-out evaluation and no leaderboard feedback, we relied on small paired local tests.
+- **Summary:** We missed the final round by only **2 places** (21 teams qualified). We will keep learning and come back stronger.
 """
 
 [[items.links]]
