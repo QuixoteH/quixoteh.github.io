@@ -12,9 +12,11 @@ images = [
   "/research/so101-real-robot-demo.gif"
 ]
 content = """
-- Reproduced an end-to-end imitation-learning pipeline on the Huaner SO-101 dual-arm platform using the LeRobot framework, covering teleoperation data collection, SmolVLA policy training, and real-world deployment.
-- Configured the full software stack and performed source-level modifications to enable RGB multi-view perception and language-conditioned manipulation.
-- Diagnosed and resolved hardware setup, camera calibration, and inference failure cases through iterative debugging and validation.
+- **Background:** The Huaner SO-101 is a low-cost dual-arm platform, and LeRobot provides an open pipeline for real-robot imitation learning.
+- **Task:** Reproduce an end-to-end pipeline on real hardware, from teleoperation data collection to policy training and on-robot deployment.
+- **Action:** Collected teleoperated demonstrations, trained a SmolVLA policy, and modified the source to support RGB multi-view perception and language-conditioned manipulation. Debugged hardware setup, camera calibration, and inference failures along the way.
+- **Result:** Achieved real-robot policy inference on the SO-101, with a demo video and a full reproduction record published in the repository.
+- **Reflection:** Reproduction should go layer by layer: device safety, static data checks, a 200-step smoke test, checkpoint loading, then fixed-start real-robot evaluation. A failure at any layer should be fixed there, not hidden by longer training or more data.
 """
 
 [[items.links]]
@@ -35,10 +37,11 @@ organization = "Northeast Agricultural University"
 date = "01/2026"
 visuals = ["STM32 + ESP32-CAM", "YOLOv8x · IP102"]
 content = """
-- Designed the embedded control architecture on an STM32F103C8T6 microcontroller, integrating DHT22 temperature and humidity sensing with an effective accumulated-temperature algorithm for automated SMS pest-outbreak alerts.
-- Configured an ESP32-S3-WROOM-1U WiFi module to stream live field video from the microcontroller node to a host-computer gateway for real-time processing.
-- Built the video ingestion and preprocessing pipeline with OpenCV to feed live field footage into the inference pipeline.
-- Fine-tuned and deployed a YOLOv8x model for real-time pest detection on the IP102 dataset, with results visualized through a PyQt5 interface backed by SQLite.
+- **Background:** Field pest outbreaks depend on temperature and are hard to monitor continuously and cheaply, so this undergraduate thesis combines IoT sensing with vision-based detection.
+- **Task:** Design a system that senses the environment, streams field video, detects pests in real time, and alerts users automatically.
+- **Action:** Built STM32F103C8T6 firmware with DHT22 sensing, an accumulated-temperature algorithm, and SMS alerts. Streamed video from an ESP32 module to a host computer, preprocessed it with OpenCV, and fine-tuned YOLOv8x on IP102 with a PyQt5 and SQLite interface.
+- **Result:** Delivered a working end-to-end system covering sensing, outbreak alerts, live video, and real-time pest detection with recorded results.
+- **Reflection:** The smaller YOLOv8s model did not perform well enough, so we moved to YOLOv8x. The project showed that embedded hardware, video streaming, and the model must be designed together as one system.
 """
 
 [[items.links]]
@@ -61,9 +64,11 @@ images = [
   "/research/msm-seg-method.png"
 ]
 content = """
-- Conducted comprehensive comparative experiments by training and evaluating 3D segmentation models (nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and others) on BraTS 2024 and BraTS 2025 datasets.
-- Implemented standardized evaluation protocols in the BraTS-METS benchmark, measuring Dice and HD95 for ET, TC, and WT sub-regions.
-- Analyzed quantitative results to validate that MSM-Seg outperforms or matches all baselines, particularly under the category-agnostic prompting setting.
+- **Background:** MSM-Seg is a modality-and-slice memory framework with category-agnostic prompting for multi-modal brain tumor segmentation.
+- **Task:** Provide the comparative experiments that show how MSM-Seg stands against existing 3D segmentation methods.
+- **Action:** Trained and evaluated nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and other models on BraTS 2024 and BraTS 2025 under a standardized protocol, measuring Dice and HD95 for the ET, TC, and WT sub-regions.
+- **Result:** MSM-Seg outperformed or matched all baselines, particularly under the category-agnostic prompting setting, and the work was published in *IEEE Transactions on Multimedia*.
+- **Reflection:** Fair comparison needs one shared evaluation protocol and the same data splits for every method, otherwise differences in the numbers cannot be trusted.
 """
 
 [[items.links]]

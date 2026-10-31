@@ -10,9 +10,11 @@ organization = "RoboSynChallenge Organizing Committee"
 date = "10/2026"
 visuals = ["23rd", "Preliminary Stage"]
 content = """
-- **Models and usage:** Selected per task among the official released **ACT**, **Diffusion Policy**, and **SmolVLA** checkpoints behind one unified adapter, trained a **pi0.5** policy for the handle-basket task, fine-tuned released checkpoints with extra perturbed simulation data, and tuned inference settings such as the replanning interval (water pouring success rose from 50% to 85%).
-- **Challenges with small models:** The released small policies were brittle under scene perturbations, with click-bell, pipette, and drawer tasks dropping sharply, while handover and sample loading stayed near zero. Fine-tuning often brought no gain (drawer SmolVLA unchanged, item assembly worse), and temporal ensembling hurt. With only held-out evaluation and no leaderboard feedback, we relied on small paired local tests.
-- **Summary:** We missed the final round by only **2 places** (21 teams qualified). We will keep learning and come back stronger.
+- **Background:** RoboSynChallenge is a NeurIPS 2026 embodied-AI competition with 10 simulated manipulation tasks, scored by success rate, action efficiency, and inference efficiency.
+- **Task:** As Team LBWSquare, maximize the overall score with a single submission covering all 10 tasks, evaluated once on hidden held-out parameters with no leaderboard feedback.
+- **Action:** Selected per task among the official released **ACT**, **Diffusion Policy**, and **SmolVLA** checkpoints behind one unified adapter, trained a **pi0.5** policy for the handle-basket task, fine-tuned released checkpoints with extra perturbed simulation data, and tuned inference settings such as the replanning interval.
+- **Result:** Ranked **23rd** in the preliminary stage, missing the final round by only **2 places** (21 teams qualified). Tuning the replanning interval raised water-pouring success from 50% to 85%.
+- **Reflection:** The small released policies were brittle under scene perturbations, handover and sample loading stayed near zero, and fine-tuning or temporal ensembling often brought no gain. With only small paired local tests to guide decisions, we will keep learning and come back stronger.
 """
 
 [[items.links]]
@@ -31,9 +33,11 @@ images = [
   "/competitions/marso-dp-results.png"
 ]
 content = """
-- Built State Diffusion Policy and RGB ACT training and evaluation pipelines for color-matched parcel sorting with a Franka Panda robot in ManiSkill3 and SAPIEN.
-- Evaluated State Diffusion Policy across Easy, Medium, and Hard settings over fixed 50-episode runs, obtaining local sort accuracies of **0.390**, **0.090**, and **0.103**.
-- Completed 30,000 offline updates for the Easy RGB ACT policy and verified checkpoint loading and submission packaging.
+- **Background:** Marso Hack Berlin 2026 asked for color-matched parcel sorting with a Franka Panda robot in ManiSkill3 and SAPIEN. The deadline had passed, so no official submission was made.
+- **Task:** Reproduce imitation-learning baselines for the challenge to study how they behave across the Easy, Medium, and Hard settings.
+- **Action:** Built State Diffusion Policy and RGB ACT training and evaluation pipelines, evaluated State Diffusion Policy over fixed 50-episode runs per setting, and trained the Easy RGB ACT policy for 30,000 offline updates.
+- **Result:** Local sort accuracies for State Diffusion Policy were **0.390** (Easy), **0.090** (Medium), and **0.103** (Hard). Checkpoint loading and submission packaging were verified.
+- **Reflection:** Accuracy dropped sharply from Easy to Medium and Hard, which shows that generalizing across settings, not fitting a single setting, is the real difficulty of this task.
 """
 
 [[items.links]]
