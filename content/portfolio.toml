@@ -12,11 +12,11 @@ images = [
   "/research/so101-real-robot-demo.gif"
 ]
 content = """
-- **Background:** The Huaner SO-101 is a low-cost dual-arm platform, and LeRobot offers an open pipeline for real-robot imitation learning. The real dataset has **90** episodes and **17,778** frames at 20 Hz, with two colors, three lighting conditions, and two cameras.
-- **Task:** Reproduce the full pipeline on real hardware, from teleoperated data collection to policy training and deployment, and judge it by real task success rather than training loss.
-- **Action:** Collected the teleoperated demonstrations, ran a 200-step smoke test, then trained a SmolVLA baseline for **25,000** steps (batch size 8). Modified the source to support RGB multi-view perception and language-conditioned manipulation, and fixed hardware, camera-calibration, and inference failures. Kept the collection (LeRobot 0.3.4) and training (0.5.1) environments separate.
-- **Result:** The green-task 10k checkpoint succeeded in **9/10** consecutive demonstrations, while the purple task reached **5/10** at both 10k and 20k steps. The 9/10 is a consecutive demonstration, not an independent randomized-reset test.
-- **Review:** Purple did not improve from 10k to 20k steps, so the limit was in the data or interface rather than training length. Next time I would run independent randomized-reset trials and check each layer in order (device safety, data, smoke test, checkpoint loading, real evaluation) instead of training longer.
+- **Background:** Our real SO-101 dataset has **90** teleoperated episodes (17,778 frames at 20 Hz) covering two block colors and three lighting conditions.
+- **Task:** Fine-tune a language-conditioned SmolVLA policy to place a small green or purple block on a plate from dual-camera images.
+- **Action:** Trained SmolVLA for **25,000** steps with source changes for multi-view RGB input, and debugged calibration and inference failures on the real robot.
+- **Result:** The green-task 10k checkpoint succeeded in **9/10** consecutive demonstrations, while the purple task reached **5/10** at both 10k and 20k steps.
+- **Review:** Purple did not improve with longer training, which points to data or interface limits, so next time I would run independent randomized-reset trials.
 """
 
 [[items.links]]
@@ -37,11 +37,11 @@ organization = "Northeast Agricultural University"
 date = "01/2026"
 visuals = ["STM32 + ESP32-CAM", "YOLOv8x · IP102"]
 content = """
-- **Background:** Pest outbreaks depend on accumulated temperature and are hard to monitor continuously and cheaply in the field, so this undergraduate thesis combines IoT sensing with vision-based detection on the **102**-class IP102 dataset.
-- **Task:** Build a system that samples the environment, streams field video, detects pests in real time, and sends automatic alerts, running on low-cost embedded hardware.
-- **Action:** Wrote STM32F103C8T6 firmware with 5-second DHT22 sampling, a 24-hour accumulated-temperature settlement stored in EEPROM, and SMS alerts. Streamed video from the ESP32 module to a host computer, preprocessed it with OpenCV, and used a three-thread PyQt5 and SQLite application. Chose YOLOv8x over YOLOv8s because the smaller model performed poorly.
-- **Result:** Delivered a working end-to-end system covering sensing, outbreak alerts, live video, and real-time detection with recorded results.
-- **Review:** Moving to YOLOv8x traded inference cost for accuracy, and the project showed that firmware, video transport, and the model have to be designed together. Next time I would measure detection accuracy and end-to-end latency in the field from the start.
+- **Background:** Pest outbreaks depend on accumulated temperature, so this thesis combines low-cost IoT sensing with vision-based detection on a 7-class IP102 subset.
+- **Task:** Build a system that samples the environment, streams field video, detects pests in real time, and sends SMS alerts, aiming for 10 fps and over 80% recognition accuracy.
+- **Action:** Wrote STM32 firmware for 5-second DHT22 sampling, accumulated-temperature alerts, and ESP32 video streaming, and fine-tuned YOLOv8x in a PyQt5 application with SQLite logging.
+- **Result:** The YOLOv8x model reached **0.793** mAP@0.5, with precision 0.723 and recall 0.815, on the 7-class IP102 subset.
+- **Review:** YOLOv8s performed poorly, so I moved to YOLOv8x at a higher inference cost, and next time I would measure end-to-end field latency from the start.
 """
 
 [[items.links]]
@@ -64,11 +64,11 @@ images = [
   "/research/msm-seg-method.png"
 ]
 content = """
-- **Background:** MSM-Seg is a modality-and-slice memory framework with category-agnostic prompting for multi-modal brain tumor segmentation, which needs a fair comparison against strong 3D baselines.
-- **Task:** Provide the comparative experiments that place MSM-Seg against existing methods on the BraTS 2024 and BraTS 2025 datasets.
-- **Action:** Trained and evaluated more than five baselines (nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and others) under one standardized BraTS-METS protocol, measuring Dice and HD95 on the ET, TC, and WT sub-regions.
-- **Result:** MSM-Seg outperformed or matched all baselines, especially under the category-agnostic prompting setting, and the work was published in *IEEE Transactions on Multimedia*.
-- **Review:** Comparisons are only trustworthy with the same data splits and metrics for every method. Next time I would record per-sub-region numbers and variance across runs from the start, so claims rest on data rather than a single run.
+- **Background:** MSM-Seg is a modality-and-slice memory framework with category-agnostic prompting for multi-modal 3D brain tumor segmentation, published in *IEEE Transactions on Multimedia*.
+- **Task:** Provide fair baseline comparisons on the BraTS-METS and BraTS-AGPT datasets from BraTS 2024.
+- **Action:** Reimplemented nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and other baselines under one training setting, measuring Dice and HD95 on ET, TC, and WT.
+- **Result:** With category-agnostic prompts, MSM-Seg reached **79.51%** and **83.84%** average Dice, beating SAM-Med3D by 2.04% and 1.36%.
+- **Review:** Fair comparison needs identical training settings for every method, and the weak-boundary and tiny-lesion failure cases show where to improve next.
 """
 
 [[items.links]]
