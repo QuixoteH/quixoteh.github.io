@@ -10,11 +10,11 @@ organization = "RoboSynChallenge Organizing Committee"
 date = "10/2026"
 visuals = ["23rd", "Preliminary Stage"]
 content = """
-- **Background:** RoboSynChallenge @ NeurIPS 2026 scores 10 simulated manipulation tasks by success rate (75%), action efficiency (20%), and inference efficiency (5%).
-- **Task:** As Team LBWSquare, maximize the score of one 10-task submission that is judged once on hidden held-out parameters, with no leaderboard feedback.
-- **Action:** Picked the best official ACT, Diffusion Policy, or SmolVLA checkpoint per task and replaced it only after winning paired same-seed tests, using pi0.5, fine-tuning, and replanning tuning.
-- **Result:** Ranked **23rd** in the preliminary stage, only **2 places** short of the 21 qualifiers, with handle-basket success rising from 35% to 90%.
-- **Review:** Perturbation tests should come before model selection, and the job queue should be planned ahead, since our GPU sat idle for about 19 hours.
+- RoboSynChallenge @ NeurIPS 2026 scores 10 simulated manipulation tasks by success rate (75%), action efficiency (20%), and inference efficiency (5%).
+- Our team, LBWSquare, had to submit one policy set that would be judged once on hidden held-out parameters, with no leaderboard feedback.
+- For each task we started from the best official ACT, Diffusion Policy, or SmolVLA checkpoint and swapped it only when pi0.5, fine-tuning, or replanning tuning won paired same-seed tests.
+- We ranked **23rd** in the preliminary stage, just **2 places** short of the 21 qualifiers, after lifting handle-basket success from 35% to 90%.
+- We learned that perturbation tests should come before model selection and that the job queue needs planning, since our GPU sat idle for about 19 hours.
 """
 
 [[items.links]]
@@ -33,11 +33,11 @@ images = [
   "/competitions/marso-dp-results.png"
 ]
 content = """
-- **Background:** Marso Hack Berlin 2026 asks a Franka Panda to sort color-matched parcels in ManiSkill3, with Easy, Medium, and Hard settings weighted 0.20, 0.30, and 0.50.
-- **Task:** Reproduce State Diffusion Policy and RGB ACT baselines and compare them under one fixed evaluation protocol.
-- **Action:** Built both pipelines, evaluated State Diffusion Policy over fixed 50-episode runs, and trained the Easy RGB ACT policy for 30,000 offline updates.
-- **Result:** Local sort accuracies were **0.390**, **0.090**, and **0.103** on Easy, Medium, and Hard, a weighted score of **0.1565**.
-- **Review:** Hard carries half the weight but scored lowest, so future effort should target Hard first and judge ACT by closed-loop results rather than offline loss.
+- Marso Hack Berlin 2026 asks a Franka Panda to sort color-matched parcels in ManiSkill3, with Easy, Medium, and Hard settings weighted 0.20, 0.30, and 0.50.
+- I set out to reproduce State Diffusion Policy and RGB ACT baselines and compare them under one fixed evaluation protocol.
+- I built both pipelines, evaluated State Diffusion Policy over fixed 50-episode runs, and trained the Easy RGB ACT policy for 30,000 offline updates.
+- State Diffusion Policy reached sort accuracies of **0.390**, **0.090**, and **0.103** on Easy, Medium, and Hard, a weighted score of **0.1565**.
+- Hard carries half the weight but scored lowest, so next time I would target it first and judge ACT by closed-loop results rather than offline loss.
 """
 
 [[items.links]]
