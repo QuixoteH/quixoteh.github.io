@@ -3,9 +3,25 @@ title = "Competitions"
 description = "Selected robotics and machine-learning competition projects and results."
 
 [[items]]
+title = "RoboSynChallenge @ NeurIPS 2026"
+badge = "23rd · Preliminary Stage"
+role = "Embodied-AI competition, Team LBWSquare"
+organization = "RoboSynChallenge Organizing Committee"
+date = "10/2026"
+visuals = ["23rd", "Preliminary Stage"]
+content = """
+- Team LBWSquare ranked **23rd** in the preliminary stage of the RoboSynChallenge embodied-AI competition.
+"""
+
+[[items.links]]
+label = "Leaderboard"
+url = "https://robosyn-bench.net/#/leaderboard"
+kind = "competition"
+
+[[items]]
 title = "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge"
-badge = "Completed Competition Project"
-role = "Imitation-learning solution for simulated parcel sorting"
+badge = "Not Submitted · Reproduction Study"
+role = "Post-deadline reproduction and experiments (no official submission)"
 organization = "Marso Robotics"
 date = "07/2026"
 images = [
@@ -26,20 +42,4 @@ kind = "code"
 [[items.links]]
 label = "Competition Page"
 url = "https://github.com/marso-robotics/berlin-marso-hackathon"
-kind = "competition"
-
-[[items]]
-title = "Home Credit – Credit Risk Model Stability"
-badge = "Silver Medal · Top 0.5%"
-role = "Credit-risk modeling competition"
-organization = "Kaggle"
-date = "05/2024"
-visuals = ["Silver Medal", "Top 0.5%"]
-content = """
-- Earned a silver medal in the Home Credit – Credit Risk Model Stability competition, ranking in the **top 0.5%** of teams.
-"""
-
-[[items.links]]
-label = "Competition Page"
-url = "https://www.kaggle.com/competitions/home-credit-credit-risk-model-stability"
 kind = "competition"

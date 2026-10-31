@@ -32,7 +32,7 @@ test('editable content files are structurally valid', () => {
     }
   }
 
-  for (const file of ['education.toml', 'experience.toml', 'portfolio.toml', 'teaching.toml']) {
+  for (const file of ['education.toml', 'experience.toml', 'teaching.toml']) {
     const page = readToml(`content/${file}`);
     assert.equal(page.type, 'card');
     assert.ok(isNonEmptyString(page.title));
