@@ -12,11 +12,11 @@ images = [
   "/research/so101-real-robot-demo.gif"
 ]
 content = """
-- **Background:** The Huaner SO-101 is a low-cost dual-arm platform, and LeRobot provides an open pipeline for real-robot imitation learning.
-- **Task:** Reproduce an end-to-end pipeline on real hardware, from teleoperation data collection to policy training and on-robot deployment.
-- **Action:** Collected teleoperated demonstrations, trained a SmolVLA policy, and modified the source to support RGB multi-view perception and language-conditioned manipulation. Debugged hardware setup, camera calibration, and inference failures along the way.
-- **Result:** Achieved real-robot policy inference on the SO-101, with a demo video and a full reproduction record published in the repository.
-- **Reflection:** Reproduction should go layer by layer: device safety, static data checks, a 200-step smoke test, checkpoint loading, then fixed-start real-robot evaluation. A failure at any layer should be fixed there, not hidden by longer training or more data.
+- **Background:** The Huaner SO-101 is a low-cost dual-arm platform, and LeRobot offers an open pipeline for real-robot imitation learning. The real dataset has **90** episodes and **17,778** frames at 20 Hz, with two colors, three lighting conditions, and two cameras.
+- **Task:** Reproduce the full pipeline on real hardware, from teleoperated data collection to policy training and deployment, and judge it by real task success rather than training loss.
+- **Action:** Collected the teleoperated demonstrations, ran a 200-step smoke test, then trained a SmolVLA baseline for **25,000** steps (batch size 8). Modified the source to support RGB multi-view perception and language-conditioned manipulation, and fixed hardware, camera-calibration, and inference failures. Kept the collection (LeRobot 0.3.4) and training (0.5.1) environments separate.
+- **Result:** The green-task 10k checkpoint succeeded in **9/10** consecutive demonstrations, while the purple task reached **5/10** at both 10k and 20k steps. The 9/10 is a consecutive demonstration, not an independent randomized-reset test.
+- **Review:** Purple did not improve from 10k to 20k steps, so the limit was in the data or interface rather than training length. Next time I would run independent randomized-reset trials and check each layer in order (device safety, data, smoke test, checkpoint loading, real evaluation) instead of training longer.
 """
 
 [[items.links]]
@@ -37,11 +37,11 @@ organization = "Northeast Agricultural University"
 date = "01/2026"
 visuals = ["STM32 + ESP32-CAM", "YOLOv8x · IP102"]
 content = """
-- **Background:** Field pest outbreaks depend on temperature and are hard to monitor continuously and cheaply, so this undergraduate thesis combines IoT sensing with vision-based detection.
-- **Task:** Design a system that senses the environment, streams field video, detects pests in real time, and alerts users automatically.
-- **Action:** Built STM32F103C8T6 firmware with DHT22 sensing, an accumulated-temperature algorithm, and SMS alerts. Streamed video from an ESP32 module to a host computer, preprocessed it with OpenCV, and fine-tuned YOLOv8x on IP102 with a PyQt5 and SQLite interface.
-- **Result:** Delivered a working end-to-end system covering sensing, outbreak alerts, live video, and real-time pest detection with recorded results.
-- **Reflection:** The smaller YOLOv8s model did not perform well enough, so we moved to YOLOv8x. The project showed that embedded hardware, video streaming, and the model must be designed together as one system.
+- **Background:** Pest outbreaks depend on accumulated temperature and are hard to monitor continuously and cheaply in the field, so this undergraduate thesis combines IoT sensing with vision-based detection on the **102**-class IP102 dataset.
+- **Task:** Build a system that samples the environment, streams field video, detects pests in real time, and sends automatic alerts, running on low-cost embedded hardware.
+- **Action:** Wrote STM32F103C8T6 firmware with 5-second DHT22 sampling, a 24-hour accumulated-temperature settlement stored in EEPROM, and SMS alerts. Streamed video from the ESP32 module to a host computer, preprocessed it with OpenCV, and used a three-thread PyQt5 and SQLite application. Chose YOLOv8x over YOLOv8s because the smaller model performed poorly.
+- **Result:** Delivered a working end-to-end system covering sensing, outbreak alerts, live video, and real-time detection with recorded results.
+- **Review:** Moving to YOLOv8x traded inference cost for accuracy, and the project showed that firmware, video transport, and the model have to be designed together. Next time I would measure detection accuracy and end-to-end latency in the field from the start.
 """
 
 [[items.links]]
@@ -64,11 +64,11 @@ images = [
   "/research/msm-seg-method.png"
 ]
 content = """
-- **Background:** MSM-Seg is a modality-and-slice memory framework with category-agnostic prompting for multi-modal brain tumor segmentation.
-- **Task:** Provide the comparative experiments that show how MSM-Seg stands against existing 3D segmentation methods.
-- **Action:** Trained and evaluated nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and other models on BraTS 2024 and BraTS 2025 under a standardized protocol, measuring Dice and HD95 for the ET, TC, and WT sub-regions.
-- **Result:** MSM-Seg outperformed or matched all baselines, particularly under the category-agnostic prompting setting, and the work was published in *IEEE Transactions on Multimedia*.
-- **Reflection:** Fair comparison needs one shared evaluation protocol and the same data splits for every method, otherwise differences in the numbers cannot be trusted.
+- **Background:** MSM-Seg is a modality-and-slice memory framework with category-agnostic prompting for multi-modal brain tumor segmentation, which needs a fair comparison against strong 3D baselines.
+- **Task:** Provide the comparative experiments that place MSM-Seg against existing methods on the BraTS 2024 and BraTS 2025 datasets.
+- **Action:** Trained and evaluated more than five baselines (nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and others) under one standardized BraTS-METS protocol, measuring Dice and HD95 on the ET, TC, and WT sub-regions.
+- **Result:** MSM-Seg outperformed or matched all baselines, especially under the category-agnostic prompting setting, and the work was published in *IEEE Transactions on Multimedia*.
+- **Review:** Comparisons are only trustworthy with the same data splits and metrics for every method. Next time I would record per-sub-region numbers and variance across runs from the start, so claims rest on data rather than a single run.
 """
 
 [[items.links]]

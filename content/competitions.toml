@@ -10,11 +10,11 @@ organization = "RoboSynChallenge Organizing Committee"
 date = "10/2026"
 visuals = ["23rd", "Preliminary Stage"]
 content = """
-- **Background:** RoboSynChallenge is a NeurIPS 2026 embodied-AI competition with 10 simulated manipulation tasks, scored by success rate, action efficiency, and inference efficiency.
-- **Task:** As Team LBWSquare, maximize the overall score with a single submission covering all 10 tasks, evaluated once on hidden held-out parameters with no leaderboard feedback.
-- **Action:** Selected per task among the official released **ACT**, **Diffusion Policy**, and **SmolVLA** checkpoints behind one unified adapter, trained a **pi0.5** policy for the handle-basket task, fine-tuned released checkpoints with extra perturbed simulation data, and tuned inference settings such as the replanning interval.
-- **Result:** Ranked **23rd** in the preliminary stage, missing the final round by only **2 places** (21 teams qualified). Tuning the replanning interval raised water-pouring success from 50% to 85%.
-- **Reflection:** The small released policies were brittle under scene perturbations, handover and sample loading stayed near zero, and fine-tuning or temporal ensembling often brought no gain. With only small paired local tests to guide decisions, we will keep learning and come back stronger.
+- **Background:** RoboSynChallenge is a NeurIPS 2026 embodied-AI competition with **10** simulated manipulation tasks. Scoring weights success rate at 75%, action efficiency at 20%, and inference efficiency at 5%, and the preliminary-round cutoff turned out to be 35 points.
+- **Task:** As Team LBWSquare, maximize the overall score with one submission covering all 10 tasks, judged once on hidden held-out parameters (different seeds, lighting, and camera views) with no leaderboard feedback.
+- **Action:** Started from the best official **ACT**, **Diffusion Policy**, or **SmolVLA** checkpoint per task (estimated baseline: 54.5% mean success rate, about 46.6 points) and replaced a model only when it won paired same-seed tests in both normal and perturbed scenes. Trained **pi0.5** for handle-basket, fine-tuned released models with extra perturbed simulation data, and tuned replanning intervals. Dropped pi0.5 on drawer, pipette, assembly, and handover (for example drawer 0/10 vs 5/10), and dropped temporal ensembling (mixer 1/10 vs 8/10).
+- **Result:** Ranked **23rd** in the preliminary stage; **21** teams qualified, so we missed the final by only **2 places**. Handle-basket success rose from 35% to 90% (20 episodes), water pouring from 10/20 to 17/20 after replanning, and items handover from 6/30 to 22/30 after SmolVLA replanning.
+- **Review:** We only found which tasks collapsed under perturbation after the baseline was in place, so next time the perturbation test comes first and drives model selection. Our GPU also sat idle for about 19 hours because no follow-up jobs were queued, so next time the job queue is planned ahead. We will keep learning and come back stronger.
 """
 
 [[items.links]]
@@ -33,11 +33,11 @@ images = [
   "/competitions/marso-dp-results.png"
 ]
 content = """
-- **Background:** Marso Hack Berlin 2026 asked for color-matched parcel sorting with a Franka Panda robot in ManiSkill3 and SAPIEN.
-- **Task:** Reproduce imitation-learning baselines for the challenge to study how they behave across the Easy, Medium, and Hard settings.
-- **Action:** Built State Diffusion Policy and RGB ACT training and evaluation pipelines, evaluated State Diffusion Policy over fixed 50-episode runs per setting, and trained the Easy RGB ACT policy for 30,000 offline updates.
-- **Result:** Local sort accuracies for State Diffusion Policy were **0.390** (Easy), **0.090** (Medium), and **0.103** (Hard). Checkpoint loading and submission packaging were verified.
-- **Reflection:** Accuracy dropped sharply from Easy to Medium and Hard, which shows that generalizing across settings, not fitting a single setting, is the real difficulty of this task.
+- **Background:** Marso Hack Berlin 2026 asked for color-matched parcel sorting with a Franka Panda in ManiSkill3 and SAPIEN, in three settings: Easy (2 parcels), Medium (4), and Hard (6, with bins that may swap). The score weights are 0.20, 0.30, and 0.50.
+- **Task:** Reproduce State Diffusion Policy and RGB ACT baselines and measure them with a fixed protocol across all three settings.
+- **Action:** Built both training and evaluation pipelines and evaluated State Diffusion Policy on fixed seeds 5000-5049 (50 episodes per setting) so candidates could be compared fairly. Trained the Easy RGB ACT policy for 30,000 offline updates and verified checkpoint loading and the 195 MiB submission package.
+- **Result:** State Diffusion Policy reached sort accuracies of **0.390**, **0.090**, and **0.103** on Easy, Medium, and Hard, a weighted local score of **0.1565**. These are local fixed-seed results, not a held-out leaderboard score.
+- **Review:** Hard carries half of the weight but scored only 0.103, so effort on the Hard setting would raise the weighted score the most. Next time I would evaluate Hard early and use closed-loop RGB results, not only offline loss, to judge the ACT policy.
 """
 
 [[items.links]]
