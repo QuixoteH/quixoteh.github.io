@@ -5,18 +5,16 @@ description = "Selected research and engineering projects in robot learning, emb
 [[items]]
 title = "SO-101 Real-World Robotic Learning with LeRobot"
 badge = "Real-Robot Deployment"
-role = "End-to-end imitation learning on the Huaner SO-101 dual-arm platform"
+role = "Real-world imitation learning"
 organization = "LeRobot · SmolVLA"
 date = "07/2026"
 images = [
   "/research/so101-real-robot-demo.gif"
 ]
 content = """
-- I collected **90** teleoperated SO-101 episodes (17,778 frames at 20 Hz) covering two block colors and three lighting conditions.
-- I fine-tuned a language-conditioned SmolVLA policy to place a small green or purple block on a plate from dual-camera images.
-- I trained it for **25,000** steps with source changes for multi-view RGB input, and debugged calibration and inference failures on the real robot.
-- The green-task 10k checkpoint succeeded in **9/10** consecutive demonstrations, while the purple task reached **5/10** at both 10k and 20k steps.
-- Purple did not improve with longer training, which points to data or interface limits, so I would run independent randomized-reset trials next.
+- Collected **90** teleoperated episodes (17,778 frames at 20 Hz) with dual cameras across two block colors and three lighting conditions on the Huaner SO-101 arm.
+- Fine-tuned a language-conditioned SmolVLA policy for **25,000** steps with LeRobot, modifying the source for multi-view RGB input and debugging calibration and inference failures.
+- Reached **9/10** on consecutive real-robot demonstrations for the green block, while the purple block stayed at **5/10** at both 10k and 20k steps.
 """
 
 [[items.links]]
@@ -32,7 +30,7 @@ kind = "video"
 [[items]]
 title = "YOLOv8 and IoT Agricultural Pest Detection System"
 badge = "Undergraduate Thesis"
-role = "Embedded sensing, live video, and YOLOv8 pest detection"
+role = "Embedded sensing and YOLOv8 detection"
 organization = "Northeast Agricultural University"
 date = "01/2026"
 images = [
@@ -40,11 +38,9 @@ images = [
   "/research/pest-detection-ui.jpg"
 ]
 content = """
-- Pest outbreaks depend on accumulated temperature, so my thesis pairs low-cost IoT sensing with vision-based detection on a 7-class IP102 subset.
-- I aimed for a system that samples the environment, streams field video, detects pests in real time, and sends SMS alerts, at 10 fps and over 80% recognition accuracy.
-- I wrote STM32 firmware for 5-second DHT22 sampling, accumulated-temperature alerts, and ESP32 video streaming, then fine-tuned YOLOv8x inside a PyQt5 application with SQLite logging.
-- The YOLOv8x model reached **0.793** mAP@0.5, with precision 0.723 and recall 0.815.
-- YOLOv8s performed poorly, so I moved to YOLOv8x at a higher inference cost, and next time I would measure end-to-end field latency from the start.
+- Designed STM32F103C8T6 firmware with DHT22 sampling, accumulated-temperature outbreak alerts over SMS, and ESP32 video streaming to a host computer.
+- Fine-tuned YOLOv8x on a 7-class IP102 subset and built a PyQt5 application with SQLite logging for real-time pest detection.
+- Reached **0.793** mAP@0.5 (precision 0.723, recall 0.815), choosing YOLOv8x after YOLOv8s performed poorly.
 """
 
 [[items.links]]
@@ -60,18 +56,16 @@ kind = "code"
 [[items]]
 title = "MSM-Seg: Cross-Modal 3D Brain Tumor Segmentation"
 badge = "IEEE Transactions on Multimedia"
-role = "Comparative 3D segmentation experiments supporting the MSM-Seg framework"
+role = "Baseline experiments"
 organization = "Collaborative research"
 date = "03/2025"
 images = [
   "/research/msm-seg-method.png"
 ]
 content = """
-- MSM-Seg is a modality-and-slice memory framework with category-agnostic prompting for multi-modal 3D brain tumor segmentation, published in *IEEE Transactions on Multimedia*.
-- I ran the baseline comparisons on the BraTS-METS and BraTS-AGPT datasets from BraTS 2024.
-- I reimplemented nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and other baselines under one training setting and measured Dice and HD95 on ET, TC, and WT.
-- With category-agnostic prompts, MSM-Seg reached **79.51%** and **83.84%** average Dice, beating SAM-Med3D by 2.04% and 1.36%.
-- The comparison is fair only when every method shares one training setting, and the weak-boundary and tiny-lesion failure cases show where to improve next.
+- Reimplemented nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and other baselines under one training setting on BraTS-METS and BraTS-AGPT from BraTS 2024.
+- Measured Dice and HD95 on the ET, TC, and WT sub-regions to benchmark MSM-Seg, a modality-and-slice memory framework with category-agnostic prompting.
+- Showed MSM-Seg reaching **79.51%** and **83.84%** average Dice, **2.04%** and **1.36%** above SAM-Med3D, and published the work in *IEEE Transactions on Multimedia*.
 """
 
 [[items.links]]

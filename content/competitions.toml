@@ -5,18 +5,16 @@ description = "Selected robotics and machine-learning competition projects and r
 [[items]]
 title = "RoboSynChallenge @ NeurIPS 2026"
 badge = "23rd · Preliminary Stage"
-role = "Embodied-AI competition, Team LBWSquare"
+role = "Team LBWSquare"
 organization = "RoboSynChallenge Organizing Committee"
 date = "10/2026"
 images = [
   "/competitions/robosyn-tasks.jpg"
 ]
 content = """
-- RoboSynChallenge @ NeurIPS 2026 scores 10 simulated manipulation tasks by success rate (75%), action efficiency (20%), and inference efficiency (5%).
-- Our team, LBWSquare, had to submit one policy set that would be judged once on hidden held-out parameters, with no leaderboard feedback.
-- For each task we started from the best official ACT, Diffusion Policy, or SmolVLA checkpoint and swapped it only when pi0.5, fine-tuning, or replanning tuning won paired same-seed tests.
-- We ranked **23rd** in the preliminary stage, just **2 places** short of the 21 qualifiers, after lifting handle-basket success from 35% to 90%.
-- We learned that perturbation tests should come before model selection and that the job queue needs planning, since our GPU sat idle for about 19 hours.
+- Built a 10-task simulated manipulation submission by choosing the best official ACT, Diffusion Policy, or SmolVLA checkpoint per task, replacing one only after winning paired same-seed tests.
+- Trained pi0.5 for handle-basket and tuned replanning intervals, raising handle-basket success from 35% to 90% and water-pouring from 10/20 to 17/20.
+- Ranked **23rd** in the preliminary stage, only **2 places** short of the 21 finalists, on hidden held-out parameters without leaderboard feedback.
 """
 
 [[items.links]]
@@ -27,7 +25,7 @@ kind = "competition"
 [[items]]
 title = "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge"
 badge = "Reproduction Study"
-role = "Imitation-learning reproduction and experiments for simulated parcel sorting"
+role = "Imitation-learning reproduction"
 organization = "Marso Robotics"
 date = "07/2026"
 images = [
@@ -35,11 +33,9 @@ images = [
   "/competitions/marso-dp-results.png"
 ]
 content = """
-- Marso Hack Berlin 2026 asks a Franka Panda to sort color-matched parcels in ManiSkill3, with Easy, Medium, and Hard settings weighted 0.20, 0.30, and 0.50.
-- I set out to reproduce State Diffusion Policy and RGB ACT baselines and compare them under one fixed evaluation protocol.
-- I built both pipelines, evaluated State Diffusion Policy over fixed 50-episode runs, and trained the Easy RGB ACT policy for 30,000 offline updates.
-- State Diffusion Policy reached sort accuracies of **0.390**, **0.090**, and **0.103** on Easy, Medium, and Hard, a weighted score of **0.1565**.
-- Hard carries half the weight but scored lowest, so next time I would target it first and judge ACT by closed-loop results rather than offline loss.
+- Built State Diffusion Policy and RGB ACT training and evaluation pipelines for color-matched parcel sorting with a Franka Panda robot in ManiSkill3 and SAPIEN.
+- Evaluated State Diffusion Policy over fixed 50-episode runs, obtaining sort accuracies of **0.390**, **0.090**, and **0.103** on Easy, Medium, and Hard (weighted **0.1565**).
+- Completed 30,000 offline updates for the Easy RGB ACT policy and verified checkpoint loading and submission packaging.
 """
 
 [[items.links]]
