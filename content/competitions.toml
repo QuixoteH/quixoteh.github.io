@@ -12,7 +12,7 @@ images = [
   "/competitions/robosyn-tasks.jpg"
 ]
 content = """
-- Built a 10-task simulated manipulation submission by choosing the best official ACT, Diffusion Policy, or SmolVLA checkpoint per task, replacing one only after winning paired same-seed tests.
+- Built a 10-task simulated manipulation submission by selecting, for each task, the best checkpoint among the official ACT, Diffusion Policy, and SmolVLA baselines, replacing it only after a challenger won paired same-seed tests.
 - Trained pi0.5 for handle-basket and tuned replanning intervals, raising handle-basket success from 35% to 90% and water-pouring from 10/20 to 17/20.
 - Ranked **23rd** in the preliminary stage, only **2 places** short of the 21 finalists, on hidden held-out parameters without leaderboard feedback.
 """
