@@ -35,7 +35,10 @@ badge = "Undergraduate Thesis"
 role = "Embedded sensing, live video, and YOLOv8 pest detection"
 organization = "Northeast Agricultural University"
 date = "01/2026"
-visuals = ["STM32 + ESP32-CAM", "YOLOv8x · IP102"]
+images = [
+  "/research/pest-system-architecture.jpg",
+  "/research/pest-detection-ui.jpg"
+]
 content = """
 - Pest outbreaks depend on accumulated temperature, so my thesis pairs low-cost IoT sensing with vision-based detection on a 7-class IP102 subset.
 - I aimed for a system that samples the environment, streams field video, detects pests in real time, and sends SMS alerts, at 10 fps and over 80% recognition accuracy.

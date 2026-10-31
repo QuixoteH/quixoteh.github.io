@@ -8,7 +8,9 @@ badge = "23rd · Preliminary Stage"
 role = "Embodied-AI competition, Team LBWSquare"
 organization = "RoboSynChallenge Organizing Committee"
 date = "10/2026"
-visuals = ["23rd", "Preliminary Stage"]
+images = [
+  "/competitions/robosyn-tasks.jpg"
+]
 content = """
 - RoboSynChallenge @ NeurIPS 2026 scores 10 simulated manipulation tasks by success rate (75%), action efficiency (20%), and inference efficiency (5%).
 - Our team, LBWSquare, had to submit one policy set that would be judged once on hidden held-out parameters, with no leaderboard feedback.
