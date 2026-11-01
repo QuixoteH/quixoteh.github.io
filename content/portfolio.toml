@@ -1,57 +1,6 @@
 type = "competition"
 title = "Research"
-description = "Selected research and engineering projects in robot learning, embedded sensing, and medical image segmentation."
-
-[[items]]
-title = "SO-101 Real-World Robotic Learning with LeRobot"
-badge = "Real-Robot Deployment"
-role = "Real-world imitation learning"
-organization = "LeRobot · SmolVLA"
-date = "07/2026"
-images = [
-  "/research/so101-real-robot-demo.gif"
-]
-content = """
-- Collected **90** teleoperated episodes (17,778 frames at 20 Hz) with dual cameras across two block colors and three lighting conditions on the Huaner SO-101 arm.
-- Fine-tuned a language-conditioned SmolVLA policy for **25,000** steps with LeRobot, modifying the source for multi-view RGB input and debugging calibration and inference failures.
-- Reached **9/10** on consecutive real-robot demonstrations for the green block, while the purple block stayed at **5/10** at both 10k and 20k steps.
-"""
-
-[[items.links]]
-label = "Code"
-url = "https://github.com/QuixoteH/SO-101-Real-World-Robotic-Learning-with-LeRobot"
-kind = "code"
-
-[[items.links]]
-label = "Demo Video"
-url = "https://github.com/QuixoteH/SO-101-Real-World-Robotic-Learning-with-LeRobot/blob/main/assets/so101-real-robot-inference-demo.mp4"
-kind = "video"
-
-[[items]]
-title = "YOLOv8 and IoT Agricultural Pest Detection System"
-badge = "Undergraduate Thesis"
-role = "Embedded sensing and YOLOv8 detection"
-organization = "Northeast Agricultural University"
-date = "01/2026"
-images = [
-  "/research/pest-system-architecture.jpg",
-  "/research/pest-detection-ui.jpg"
-]
-content = """
-- Designed STM32F103C8T6 firmware with DHT22 sampling, accumulated-temperature outbreak alerts over SMS, and ESP32 video streaming to a host computer.
-- Fine-tuned YOLOv8x on a 7-class IP102 subset and built a PyQt5 application with SQLite logging for real-time pest detection.
-- Reached **0.793** mAP@0.5 (precision 0.723, recall 0.815), choosing YOLOv8x after YOLOv8s performed poorly.
-"""
-
-[[items.links]]
-label = "Firmware Code"
-url = "https://github.com/QuixoteH/STM32-PestMonitor"
-kind = "code"
-
-[[items.links]]
-label = "Host-Computer Code"
-url = "https://github.com/QuixoteH/upper-computer"
-kind = "code"
+description = "Selected research projects in multi-modal medical image segmentation."
 
 [[items]]
 title = "MSM-Seg: Cross-Modal 3D Brain Tumor Segmentation"
