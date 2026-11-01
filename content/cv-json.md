@@ -61,7 +61,6 @@ Supported AI solution planning and technical delivery for government and enterpr
 
 - STM32
 - ESP32
-- SO-101 Robot Arm
 
 ## Publications
 
@@ -73,26 +72,6 @@ Yuxiang Luo, Qing Xu, **Hai Huang**, Yuqi Ouyang, Xiangjian He, Zhen Chen, Wenti
 [IEEE Xplore](https://ieeexplore.ieee.org/document/11718973) · [DOI](https://doi.org/10.1109/TMM.2026.3739470) · [Code](https://github.com/QuixoteH/MSM-Seg)
 
 ## Research Projects
-
-### SO-101 Real-World Robotic Learning with LeRobot
-
-**Real-Robot Deployment** · 07/2026
-
-- Collected 90 teleoperated episodes (17,778 frames at 20 Hz) with dual cameras across two block colors and three lighting conditions on the Huaner SO-101 arm.
-- Fine-tuned a language-conditioned SmolVLA policy for 25,000 steps with LeRobot, modifying the source for multi-view RGB input and debugging calibration and inference failures.
-- Reached 9/10 on consecutive real-robot demonstrations for the green block, while the purple block stayed at 5/10.
-
-[Code](https://github.com/QuixoteH/SO-101-Real-World-Robotic-Learning-with-LeRobot)
-
-### YOLOv8 and IoT Agricultural Pest Detection System
-
-**Undergraduate Thesis** · 01/2026
-
-- Designed STM32F103C8T6 firmware with DHT22 sampling, accumulated-temperature outbreak alerts over SMS, and ESP32 video streaming to a host computer.
-- Fine-tuned YOLOv8x on a 7-class IP102 subset and built a PyQt5 application with SQLite logging for real-time pest detection.
-- Reached 0.793 mAP@0.5 (precision 0.723, recall 0.815), choosing YOLOv8x after YOLOv8s performed poorly.
-
-[Firmware Code](https://github.com/QuixoteH/STM32-PestMonitor) · [Host-Computer Code](https://github.com/QuixoteH/upper-computer)
 
 ### MSM-Seg: Cross-Modal 3D Brain Tumor Segmentation
 
