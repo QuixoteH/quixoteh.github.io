@@ -14,7 +14,7 @@ images = [
 content = """
 - Reimplemented nnU-Net, 3D-TransUNet, TransBTS, SIN2GR, UNETR++, and other baselines under one training setting on BraTS-METS and BraTS-AGPT from BraTS 2024.
 - Measured Dice and HD95 on the ET, TC, and WT sub-regions to benchmark MSM-Seg, a modality-and-slice memory framework with category-agnostic prompting.
-- Showed MSM-Seg reaching **79.51%** and **83.84%** average Dice, **2.04%** and **1.36%** above SAM-Med3D, and published the work in *IEEE Transactions on Multimedia*.
+- Evaluated MSM-Seg reaching **79.51%** and **83.84%** average Dice, **2.04%** and **1.36%** above SAM-Med3D*.
 """
 
 [[items.links]]
