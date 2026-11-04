@@ -5,8 +5,6 @@ description = "Selected research projects in multi-modal medical image segmentat
 [[items]]
 title = "MSM-Seg: Cross-Modal 3D Brain Tumor Segmentation"
 badge = "IEEE Transactions on Multimedia"
-role = "Baseline experiments"
-organization = "Collaborative research"
 date = "03/2025"
 images = [
   "/research/msm-seg-method.png"

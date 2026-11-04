@@ -5,8 +5,6 @@ description = "Selected robotics and machine-learning competition projects and r
 [[items]]
 title = "RoboSynChallenge @ NeurIPS 2026"
 badge = "23rd · Preliminary Stage"
-role = "Team LBWSquare"
-organization = "RoboSynChallenge Organizing Committee"
 date = "10/2026"
 images = [
   "/competitions/robosyn-tasks.jpg"

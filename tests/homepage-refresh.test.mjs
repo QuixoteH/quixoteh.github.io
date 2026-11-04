@@ -59,7 +59,7 @@ test('editable content files are structurally valid', () => {
   assert.ok(isNonEmptyString(competitions.title));
   assert.ok(Array.isArray(competitions.items));
   for (const item of competitions.items) {
-    for (const field of ['title', 'organization', 'date', 'content']) {
+    for (const field of ['title', 'date', 'content']) {
       assert.ok(isNonEmptyString(item[field]));
     }
     for (const image of item.images || []) {

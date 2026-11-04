@@ -92,7 +92,12 @@ export default function CompetitionPage({ config }: { config: CompetitionPageCon
 
                                 {item.role && <p className="mb-2 font-medium text-primary">{item.role}</p>}
                                 <p className="mb-5 text-sm font-medium text-neutral-500">
-                                    {item.organization} <span aria-hidden="true">·</span> {item.date}
+                                    {item.organization && (
+                                        <>
+                                            {item.organization} <span aria-hidden="true">·</span>{' '}
+                                        </>
+                                    )}
+                                    {item.date}
                                 </p>
 
                                 <div className="text-base text-neutral-600 dark:text-neutral-400">
