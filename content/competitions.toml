@@ -5,7 +5,7 @@ description = "Selected robotics and machine-learning competition projects and r
 [[items]]
 title = "NVIDIA Video-to-Data (V2D) Challenge @ CoRL 2026"
 badge = "34th · Track 1"
-summary = "Turning human videos into 4D human–object data for robot learning."
+summary = "Across three tracks, participants turn human videos into 4D human–object reconstructions and robot policies."
 date = "11/2026"
 images = [
   "/competitions/v2d-track1-input.png",
@@ -30,7 +30,7 @@ kind = "competition"
 [[items]]
 title = "RoboSynChallenge @ NeurIPS 2026"
 badge = "23rd · Preliminary Stage"
-summary = "Learning robot manipulation from synthetic data, evaluated on real robots."
+summary = "Teams train robot manipulation policies on synthetic data plus limited real demos, judged on real robots."
 date = "10/2026"
 images = [
   "/competitions/robosyn-tasks.jpg"
@@ -56,7 +56,7 @@ title = "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge"
 badge = "Reproduction Study"
 role = "Imitation-learning reproduction"
 organization = "Marso Robotics"
-summary = "Color-matched sorting with a simulated Franka Panda arm at three difficulty levels."
+summary = "Participants train policies for a simulated Franka Panda arm to sort parcels by color at three difficulty levels."
 date = "07/2026"
 images = [
   "/competitions/marso-easy-demo.gif",
