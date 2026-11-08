@@ -94,7 +94,7 @@ Team LBWSquare
 - Designed an object-box selection rule that scores Grounding DINO candidates by confidence and distance to the performer and swaps large static boxes such as tables and tripods for the smaller handled object, then added FoundationPose re-registration and EKF smoothing, lowering CD-O from 109.5 to 67.8.
 - Ran the pipeline on an NSCC GPU cluster without Docker through a host-environment backend patch, and packaged a container that reproduces the submission and passes all 6 official verification checks.
 
-[Code](https://github.com/QuixoteH/nvidia-v2d) · [Competition Page](https://nvidia-isaac.github.io/video_to_data/v2d_challenge/)
+[Competition Page](https://nvidia-isaac.github.io/video_to_data/v2d_challenge/)
 
 ### RoboSynChallenge @ NeurIPS 2026
 
