@@ -40,6 +40,7 @@ export interface CompetitionItem {
     badge?: string;
     role?: string;
     organization?: string;
+    summary?: string;
     date: string;
     content: string;
     images?: string[];

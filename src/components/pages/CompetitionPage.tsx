@@ -91,6 +91,7 @@ export default function CompetitionPage({ config }: { config: CompetitionPageCon
                                 </div>
 
                                 {item.role && <p className="mb-2 font-medium text-primary">{item.role}</p>}
+                                {item.summary && <p className="mb-1 text-sm font-medium text-neutral-500">{item.summary}</p>}
                                 <p className="mb-5 text-sm font-medium text-neutral-500">
                                     {item.organization && (
                                         <>

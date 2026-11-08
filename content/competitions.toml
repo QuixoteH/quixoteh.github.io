@@ -5,10 +5,11 @@ description = "Selected robotics and machine-learning competition projects and r
 [[items]]
 title = "NVIDIA Video-to-Data (V2D) Challenge @ CoRL 2026"
 badge = "34th · Track 1"
+summary = "NVIDIA challenge on turning human videos into 4D human–object data for robot learning."
 date = "11/2026"
 images = [
-  "/competitions/v2d-pipeline.png",
-  "/competitions/v2d-leaderboard.png"
+  "/competitions/v2d-track1-input.png",
+  "/competitions/v2d-track1-output.png"
 ]
 content = """
 - Built a Track 1 pipeline for metric-scale 4D human–object reconstruction from monocular video by chaining the official MoGe-2, Grounding DINO, SAM 2.1, SAM 3D Body, SAM 3D Objects, and FoundationPose modules without training, reconstructing all 30 episodes with a CD-H of **14.9**, below the 15.58 of NVIDIA's CARI4D baseline.
@@ -21,9 +22,15 @@ label = "Competition Page"
 url = "https://nvidia-isaac.github.io/video_to_data/v2d_challenge/"
 kind = "competition"
 
+[[items.links]]
+label = "Kaggle (CD-H)"
+url = "https://www.kaggle.com/competitions/v2d-challenge-track1-cd-h"
+kind = "competition"
+
 [[items]]
 title = "RoboSynChallenge @ NeurIPS 2026"
 badge = "23rd · Preliminary Stage"
+summary = "NeurIPS 2026 benchmark on learning robot manipulation from synthetic data, tested on real robots."
 date = "10/2026"
 images = [
   "/competitions/robosyn-tasks.jpg"
@@ -35,6 +42,11 @@ content = """
 """
 
 [[items.links]]
+label = "Competition Page"
+url = "https://robosyn-bench.net/#/home"
+kind = "competition"
+
+[[items.links]]
 label = "Leaderboard"
 url = "https://robosyn-bench.net/#/leaderboard"
 kind = "competition"
@@ -44,6 +56,7 @@ title = "Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge"
 badge = "Reproduction Study"
 role = "Imitation-learning reproduction"
 organization = "Marso Robotics"
+summary = "Berlin hackathon task on sorting color-matched parcels with a simulated Franka Panda robot."
 date = "07/2026"
 images = [
   "/competitions/marso-easy-demo.gif",

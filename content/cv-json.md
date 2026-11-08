@@ -87,6 +87,8 @@ Yuxiang Luo, Qing Xu, **Hai Huang**, Yuqi Ouyang, Xiangjian He, Zhen Chen, Wenti
 
 ### NVIDIA Video-to-Data (V2D) Challenge @ CoRL 2026
 
+NVIDIA challenge on turning human videos into 4D human–object data for robot learning.
+
 **34th · Track 1** · 11/2026\
 Team LBWSquare
 
@@ -94,9 +96,11 @@ Team LBWSquare
 - Designed an object-box selection rule that scores Grounding DINO candidates by confidence and distance to the performer and swaps large static boxes such as tables and tripods for the smaller handled object, then added FoundationPose re-registration and EKF smoothing, lowering CD-O from 109.5 to 67.8.
 - Ran the pipeline on an NSCC GPU cluster without Docker through a host-environment backend patch, and packaged a container that reproduces the submission and passes all 6 official verification checks.
 
-[Competition Page](https://nvidia-isaac.github.io/video_to_data/v2d_challenge/)
+[Competition Page](https://nvidia-isaac.github.io/video_to_data/v2d_challenge/) · [Kaggle (CD-H)](https://www.kaggle.com/competitions/v2d-challenge-track1-cd-h)
 
 ### RoboSynChallenge @ NeurIPS 2026
+
+NeurIPS 2026 benchmark on learning robot manipulation from synthetic data, tested on real robots.
 
 **23rd · Preliminary Stage** · 10/2026\
 Team LBWSquare
@@ -105,9 +109,11 @@ Team LBWSquare
 - Trained pi0.5 for handle-basket and tuned replanning intervals, raising handle-basket success from 35% to 90% and water-pouring from 10/20 to 17/20.
 - Ranked 23rd in the preliminary stage, only 2 places short of the 21 finalists, on hidden held-out parameters without leaderboard feedback.
 
-[Leaderboard](https://robosyn-bench.net/#/leaderboard)
+[Competition Page](https://robosyn-bench.net/#/home) · [Leaderboard](https://robosyn-bench.net/#/leaderboard)
 
 ### Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge
+
+Berlin hackathon task on sorting color-matched parcels with a simulated Franka Panda robot.
 
 **Reproduction Study** · 07/2026
 
