@@ -87,7 +87,7 @@ Yuxiang Luo, Qing Xu, **Hai Huang**, Yuqi Ouyang, Xiangjian He, Zhen Chen, Wenti
 
 ### NVIDIA Video-to-Data (V2D) Challenge @ CoRL 2026
 
-NVIDIA challenge on turning human videos into 4D human–object data for robot learning.
+Turning human videos into 4D human–object data for robot learning.
 
 **34th · Track 1** · 11/2026\
 Team LBWSquare
@@ -100,7 +100,7 @@ Team LBWSquare
 
 ### RoboSynChallenge @ NeurIPS 2026
 
-NeurIPS 2026 benchmark on learning robot manipulation from synthetic data, tested on real robots.
+Learning robot manipulation from synthetic data, evaluated on real robots.
 
 **23rd · Preliminary Stage** · 10/2026\
 Team LBWSquare
@@ -113,7 +113,7 @@ Team LBWSquare
 
 ### Marso Hack Berlin 2026 – Robot Parcel Sorting Challenge
 
-Berlin hackathon task on sorting color-matched parcels with a simulated Franka Panda robot.
+Color-matched sorting with a simulated Franka Panda arm at three difficulty levels.
 
 **Reproduction Study** · 07/2026
 
