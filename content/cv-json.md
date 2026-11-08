@@ -85,6 +85,17 @@ Yuxiang Luo, Qing Xu, **Hai Huang**, Yuqi Ouyang, Xiangjian He, Zhen Chen, Wenti
 
 ## Competitions
 
+### NVIDIA Video-to-Data (V2D) Challenge @ CoRL 2026
+
+**34th · Track 1** · 11/2026\
+Team LBWSquare
+
+- Built a Track 1 pipeline for metric-scale 4D human–object reconstruction from monocular video by chaining the official MoGe-2, Grounding DINO, SAM 2.1, SAM 3D Body, SAM 3D Objects, and FoundationPose modules without training, reconstructing all 30 episodes with a CD-H of 14.9, below the 15.58 of NVIDIA's CARI4D baseline.
+- Designed an object-box selection rule that scores Grounding DINO candidates by confidence and distance to the performer and swaps large static boxes such as tables and tripods for the smaller handled object, then added FoundationPose re-registration and EKF smoothing, lowering CD-O from 109.5 to 67.8.
+- Ran the pipeline on an NSCC GPU cluster without Docker through a host-environment backend patch, and packaged a container that reproduces the submission and passes all 6 official verification checks.
+
+[Code](https://github.com/QuixoteH/nvidia-v2d) · [Competition Page](https://nvidia-isaac.github.io/video_to_data/v2d_challenge/)
+
 ### RoboSynChallenge @ NeurIPS 2026
 
 **23rd · Preliminary Stage** · 10/2026\

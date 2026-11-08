@@ -1,4 +1,8 @@
 [[news]]
+date = "[11/2026]"
+content = "Ranked 34th in Track 1 of the [NVIDIA Video-to-Data (V2D) Challenge @ CoRL 2026](https://nvidia-isaac.github.io/video_to_data/v2d_challenge/)."
+
+[[news]]
 date = "[10/2026]"
 content = "Our team LBWSquare ranked 23rd in the preliminary stage of the [RoboSynChallenge @ NeurIPS 2026](https://robosyn-bench.net/#/leaderboard)."
 
